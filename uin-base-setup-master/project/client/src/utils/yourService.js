@@ -3,29 +3,40 @@
 
 import client from './client';
 
-const fields = `
-  add_your_fields_here
-`
+const elistFields = `
+title,
+'slug': slug.current,
+'actor': actor->navn,
+`;
 
-const otherFields = `
-  add_your_fields_here
-`
-
-const anotherFields = `
-  add_your_fields_here
-`
-
-export const firstService = async () => {
-  const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${fields}}`);
-  return data;
+export const getMovies = async () => {
+    const data = await client.fetch(`*[_type== "movie"]{${elistFields}}`,);
+    return data;
 };
 
-export const secondService = async () => {
-  const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${otherFields}}`);
-  return data;
-};
+// const fields = `
+//   add_your_fields_here
+// `
 
-export const firstServiceWithParam = async (slug) => {
-  const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${anotherFields}}`, { slug });
-  return data?.[0];
-};
+// const otherFields = `
+//   add_your_fields_here
+// `
+
+// const anotherFields = `
+//   add_your_fields_here
+// `
+
+// export const firstService = async () => {
+//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${fields}}`);
+//   return data;
+// };
+
+// export const secondService = async () => {
+//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${otherFields}}`);
+//   return data;
+// };
+
+// export const firstServiceWithParam = async (slug) => {
+//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${anotherFields}}`, { slug });
+//   return data?.[0];
+// };
