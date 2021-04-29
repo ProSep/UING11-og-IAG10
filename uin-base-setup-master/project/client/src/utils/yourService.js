@@ -1,4 +1,4 @@
-// Dette er en demo for måter å hente data på. 
+// Dette er en demo for måter å hente data på.
 // Du må huske å erstatte ADD_YOUR_TYPE_HERE med egne dokumenttyper fra Sanity
 
 import client from './client';
@@ -6,12 +6,13 @@ import client from './client';
 const elistFields = `
 title,
 'slug': slug.current,
-'actor': actor->navn,
+'kategori': kategori->Kategori,
+'forfatter': forfatter->Forfatter,
 `;
 
-export const getMovies = async () => {
-    const data = await client.fetch(`*[_type== "movie"]{${elistFields}}`,);
-    return data;
+export const getKategori = async () => {
+  const data = await client.fetch(`*[_type== "kategori"]{${elistFields}}`);
+  return data;
 };
 
 // const fields = `
