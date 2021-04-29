@@ -5,10 +5,9 @@ import client from './client';
 
 const elistFields = `
 title,
-'produkt',
 'slug': slug.current,
-'kategori': kategori->navn,
-'forfatter': forfatter->navn,
+'kategori': kategori->Kategori,
+'forfatter': forfatter->Forfatter,
 `;
 
 export const getKategori = async () => {

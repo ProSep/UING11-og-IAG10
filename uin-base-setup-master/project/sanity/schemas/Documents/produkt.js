@@ -53,7 +53,7 @@ const produkt = {
     },
 
     {
-      title: "Kategori",
+      title: "Kategorier",
       name: "kategori",
       type: "reference",
       to: [{ type: "kategori" }],
