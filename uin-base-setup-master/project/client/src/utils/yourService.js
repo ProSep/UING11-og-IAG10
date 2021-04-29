@@ -4,14 +4,14 @@
 import client from './client';
 
 const elistFields = `
-title,
+tittel,
 'slug': slug.current,
-'kategori': kategori->Kategori,
-'forfatter': forfatter->Forfatter,
+'kategori': kategori->kategori,
+'bilde': bilde.asset->url
 `;
 
 export const getKategori = async () => {
-  const data = await client.fetch(`*[_type== "kategori"]{${elistFields}}`);
+  const data = await client.fetch(`*[_type== "produkt"]{${elistFields}}`);
   return data;
 };
 
