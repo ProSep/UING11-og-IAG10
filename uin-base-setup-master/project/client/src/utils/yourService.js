@@ -5,12 +5,14 @@ import client from './client';
 
 const elistFields = `
 title,
+'produkt',
 'slug': slug.current,
-'actor': actor->navn,
+'kategori': kategori->navn,
+'forfatter': forfatter->navn,
 `;
 
-export const getMovies = async () => {
-  const data = await client.fetch(`*[_type== "movie"]{${elistFields}}`);
+export const getKategori = async () => {
+  const data = await client.fetch(`*[_type== "kategori"]{${elistFields}}`);
   return data;
 };
 

@@ -51,19 +51,19 @@ const produkt = {
       type: "reference",
       to: [{ type: "forfatter" }],
     },
+
+    {
+      title: "Kategori",
+      name: "kategori",
+      type: "reference",
+      to: [{ type: "kategori" }],
+    },    
     {
       title: 'Detaljer',
       name: 'detaljer',
       type: 'text'
     },
-  ],
-  preview: {
-    select: {
-      title: "tittel",
-      subtitle: "forfatter.tittel",
-    },
-  },
-  
+  ]  
 };
 
 export default produkt;

@@ -7,7 +7,7 @@ const movie = {
             name: 'title',
             type: 'string',
             title: 'Tittel',
-            description: 'Titel er bra',
+            description: 'Tittel er bra',
             validation: (Rule) => Rule.required(),
         },  
         {
