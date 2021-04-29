@@ -1,6 +1,6 @@
-const manga = {
-  title: "Manga",
-  name: "manga",
+const produkt = {
+  title: "Produkt",
+  name: "produkt",
   type: "document",
   fields: [
     {
@@ -66,4 +66,4 @@ const manga = {
   
 };
 
-export default manga;
+export default produkt;

@@ -6,7 +6,7 @@ const forfatter = {
       {
         name: "forfatter",
         type: "string",
-        title: "F   orfatter",
+        title: "Forfatter",
         description: "Forfatter navn",
         validation: (Rule) => Rule.required(),
       },
