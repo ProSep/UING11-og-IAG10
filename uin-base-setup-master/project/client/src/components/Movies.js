@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Movie from './Movie';
 import { getMovies } from '../utils/yourService';
+import Navbar from './navbar/Navigation';
+
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
@@ -12,10 +14,11 @@ const Movies = () => {
 
 return (
     <>
+    <Navbar />
     <button type="button" onClick={handleClick}>
         Button
     </button>
-    
+
     {movies?.length > 0 ? movies.map((movies) => <Movie key={movies.slug} {...movies} />) : null}
     </>
     );
