@@ -3,17 +3,39 @@
 
 import client from './client';
 
-const elistFields = `
-tittel,
+const productInfo = `
+  tittel, detaljer,
+  'slug': slug.current,
+  'kategori': kategori->kategori,
+  'forfatter': forfatter->forfatter,
+  'bilde': bilde{beskrivelse, asset->{url}}
+`;
+const kategoriInfo = `
+kategori, 
 'slug': slug.current,
-'kategori': kategori->kategori,
-'bilde': bilde.asset->url
 `;
 
-export const getKategori = async () => {
-  const data = await client.fetch(`*[_type== "produkt"]{${elistFields}}`);
+
+export const getKategori = async (slug) => {
+  const data = await client.fetch(`*[_type == "kategori" && slug.current == $slug]{${kategoriInfo}}`, { slug });
+  return data?.[0];
+};
+
+export const getKategoris = async () => {
+  const data = await client.fetch(`*[_type == "kategori"]{${kategoriInfo}}`);
   return data;
 };
+
+export const getProduct = async (slug) => {
+  const data = await client.fetch(`*[_type == "produkt" && slug.current == $slug]{${productInfo}}`, { slug });
+  return data?.[0];
+};
+
+export const getProducts = async () => {
+  const data = await client.fetch(`*[_type== "produkt"]{${productInfo}}`);
+  return data;
+};
+
 
 // const fields = `
 //   add_your_fields_here
