@@ -1,6 +1,5 @@
 // Dette er en demo for måter å hente data på.
 // Du må huske å erstatte ADD_YOUR_TYPE_HERE med egne dokumenttyper fra Sanity
-
 import client from './client';
 
 const productInfo = `
@@ -10,6 +9,7 @@ const productInfo = `
   'forfatter': forfatter->forfatter,
   'bilde': bilde{beskrivelse, asset->{url}}
 `;
+
 const kategoriInfo = `
 kategori, 
 'slug': slug.current,
@@ -31,8 +31,8 @@ export const getProduct = async (slug) => {
   return data?.[0];
 };
 
-export const getProducts = async () => {
-  const data = await client.fetch(`*[_type== "produkt"]{${productInfo}}`);
+export const getProducts = async (slug) => {
+  const data = await client.fetch(`*[_type== "produkt" && kategori -> slug.current == $slug] | order(tittel){${productInfo}}[0...20]`, { slug });
   return data;
 };
 
