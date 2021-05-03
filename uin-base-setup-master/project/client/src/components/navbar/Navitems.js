@@ -1,22 +1,46 @@
 export const Navitems = [
   {
     title: 'Home',
-    url: '#',
+    url: '/home',
   },
   {
-    title: 'Home',
-    url: '#',
+    name: 'Bøker',
+    href: '/bøker',
   },
   {
-    title: 'Home',
-    url: '#',
+    name: 'Manga',
+    href: '/manga',
   },
   {
-    title: 'Home',
-    url: '#',
+    title: 'Tegneserier',
+    url: '/tegneserier',
   },
   {
-    title: 'Home',
-    url: '#',
+    title: 'Merch',
+    url: '/merch',
+  },
+  {
+    title: 'Hobby',
+    url: '/hobby',
+  },
+  {
+    title: 'Klær',
+    url: '/klær',
+  },
+  {
+    title: 'Lego',
+    url: '/lego',
+  },
+  {
+    title: 'Brands',
+    url: '/brands',
+  },
+  {
+    title: 'Nyheter',
+    url: '/nyheter',
+  },
+  {
+    title: 'Blogg',
+    url: '/blogg',
   },
 ];

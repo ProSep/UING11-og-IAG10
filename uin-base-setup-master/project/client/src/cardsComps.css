@@ -1,0 +1,31 @@
+.card-container {
+    width: 250px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    background-color: red;
+    /*{height: 500px;}
+}*/
+    transition: 0.3s;
+    animation: ease-in-out;
+}
+
+.card-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.image-container img{
+    overflow: hidden;
+    height: 250px;
+    
+}
+
+.btn button {
+    margin: 15px;
+    background-color: rgba(68, 143, 255, 0.699);
+}
+.btn button:hover {
+    margin: 15px;
+    background-color: rgba(39, 146, 17, 0.699);
+}
