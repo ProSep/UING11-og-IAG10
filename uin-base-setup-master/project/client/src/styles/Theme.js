@@ -3,7 +3,10 @@ import { GlobalStyles } from './Global';
 
 // Her må du legge til egne verdier
 const theme = {
-  variable: 'value',
+  nav: {
+    background: "pink",
+    buttons: "black",
+  },
 };
 
 const Theme = ({ children }) => (
