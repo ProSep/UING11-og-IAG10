@@ -6,6 +6,7 @@ const productInfo = `
   tittel, detaljer,
   'slug': slug.current,
   'kategori': kategori->kategori,
+  'kslug': kategori->slug.current,
   'forfatter': forfatter->forfatter,
   'bilde': bilde{beskrivelse, asset->{url}}
 `;

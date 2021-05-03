@@ -9,7 +9,7 @@ const produkts  = ProductsFetcher();
 console.log(produkts);
 
 if (status === 'loading') return <p>Loading...</p>;
-if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;
+if (status === 'error') return <p>Noe gikk galt når data ble hentet. {produkts?.message}</p>;
 
 const Div = styled.div`
   display: flex;

@@ -10,9 +10,9 @@ const Div = styled.div`
   font-family: arial;
 `
 
-const ProductsLayout = ({ tittel, slug, detaljer, forfatter, bilde, kategori}) => (
+const ProductsLayout = ({ tittel, slug, detaljer, forfatter, bilde, kslug}) => (
   <Div>
-    <Link to={`/${kategori}/${slug}`}className={slug}>
+    <Link to={`/${kslug}/${slug}`}className={slug}>
         <h2>{tittel}</h2>
         <p>{detaljer}</p>
         <p>{forfatter}</p>

@@ -5,6 +5,7 @@ const SingleItemFetch = ( whatContent ) => {
   const { slug } = useParams();
   const [data, setData] = useState(null);
   const [status, setStatus] = useState(null);
+
   
   useEffect(() => {
     const fetchData = async () => {
