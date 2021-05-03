@@ -37,6 +37,13 @@ export const getProducts = async (slug) => {
   return data;
 };
 
+export const getSearch = async () => {
+  const data = await client.fetch(`*[[tittel, kategori->kategori, forfatter->forfatter] match ["one duck", "one duck", "one duck"]]{${productInfo}}[0...20]`);
+  return data;
+};
+
+
+
 
 // const fields = `
 //   add_your_fields_here
