@@ -4,8 +4,8 @@ import { GlobalStyles } from './Global';
 // Her må du legge til egne verdier
 const theme = {
   nav: {
-    background: '#000000',
-    link: '#495234',
+    background: "pink",
+    buttons: "black",
   },
 };
 
