@@ -37,6 +37,7 @@ export const getProducts = async (slug) => {
 };
 
 
+
 // const fields = `
 //   add_your_fields_here
 // `

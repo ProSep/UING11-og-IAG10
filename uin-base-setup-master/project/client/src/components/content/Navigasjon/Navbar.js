@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
 
@@ -23,6 +24,7 @@ return (
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
       : null}
   </Ul>
+  <SearchBar />
 </nav>
 
 )
