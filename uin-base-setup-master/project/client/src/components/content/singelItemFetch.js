@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
 const SingleItemFetch = ( whatContent ) => {
-  const { slug } = useParams();
+  const { slug }= useParams();
   const [data, setData] = useState(null);
   const [status, setStatus] = useState(null);
 
