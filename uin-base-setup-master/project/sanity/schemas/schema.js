@@ -7,6 +7,7 @@ import kategori from './Documents/kategori'
 import produkt from './Documents/produkt'
 import forfatter from './Documents/forfatter'
 import register from './Documents/Register'
+import sjanger from './Documents/sjanger'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,6 +19,7 @@ export default createSchema({
     produkt,
     kategori,
     forfatter,
-    register
+    register,
+    sjanger,
   ]),
 })

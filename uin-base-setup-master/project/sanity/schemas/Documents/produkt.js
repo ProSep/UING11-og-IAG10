@@ -51,13 +51,28 @@ const produkt = {
       type: "reference",
       to: [{ type: "forfatter" }],
     },
-
+    {
+      title: 'Pris',
+      name: 'price',
+      type: 'number',
+    },
     {
       title: "Kategorier",
       name: "kategori",
       type: "reference",
       to: [{ type: "kategori" }],
-    },    
+    },  
+    {
+      name: 'sjanger',
+      title: 'Sjangere',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'sjanger'},
+        },
+      ],
+    },
     {
       title: 'Detaljer',
       name: 'detaljer',
@@ -67,3 +82,5 @@ const produkt = {
 };
 
 export default produkt;
+
+
