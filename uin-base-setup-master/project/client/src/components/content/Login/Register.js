@@ -21,10 +21,10 @@ const Register = () => {
       setLoading(false);
     }
   };
-  const [email, setUsername] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleChange = (event) => {
-    setUsername(event.target.value);
+    setEmail(event.target.value);
   };
 
   const handleSubmit = (event) => {
