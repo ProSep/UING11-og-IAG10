@@ -11,7 +11,7 @@ import Navbar from '../components/content/Navigasjon/Navbar';
 
 const Routes = () => (
   <Router>
-    <Navbar/>
+    <Navbar />
     <DefaultLayout>
       <Switch>
         <Route exact path="/">
@@ -21,7 +21,7 @@ const Routes = () => (
           <ProductPage />
         </Route>
         <Route exact path="/:slug">
-         <CategoryPage />
+          <CategoryPage />
         </Route>
       </Switch>
     </DefaultLayout>
