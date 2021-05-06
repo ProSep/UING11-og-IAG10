@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import './slider.css';
 import ImgComps from './ImgComps';
-import img1 from './img/brands-funko.jpg';
-import img2 from './img/klær.jpg';
-import img3 from './img/brands-pusheen.jpg';
-import img4 from './img/Fake-nerd-640x678.jpg';
-import img5 from './img/brands-marvel.jpg';
+import img1 from './img/ramune-banner1-outland.png';
+import img2 from './img/brands-twd.jpg';
+import img3 from './img/ushio-and-tora-edit.jpg';
+import img4 from './img/xvalhall-samleboks-banner1.jpg';
+import img5 from './img/geeky-stuff.jpg';
 
 const Slider = () => {
   const sliderArr = [
-    <ImgComps src={img1} height="400" />,
-    <ImgComps src={img2} height="100%" />,
-    <ImgComps src={img3} height="100%" />,
-    <ImgComps src={img4} height="200" />,
-    <ImgComps src={img5} height="200" />,
+    <ImgComps src={img1} />,
+    <ImgComps src={img2} />,
+    <ImgComps src={img3} />,
+    <ImgComps src={img4} />,
+    <ImgComps src={img5} />,
   ];
   const [x, setX] = useState(0);
   const goLeft = () => {
@@ -36,9 +36,11 @@ const Slider = () => {
       ))}
       <button id="goLeft" onClick={goLeft}>
         left
+        <i className="fas fa-chevron-circle-left" />
       </button>
       <button id="goRight" onClick={goRight}>
         right
+        <i className="fas fa-chevron-circle-right" />
       </button>
     </div>
   );

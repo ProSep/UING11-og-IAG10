@@ -1,8 +1,8 @@
 const HomeContent = () => (
-  <h1>
+  <h3>
     This is frontpage. Refresh for contents to reveal itself! Localhost:3000 is
     the port
-  </h1>
+  </h3>
 );
 
 export default HomeContent;
