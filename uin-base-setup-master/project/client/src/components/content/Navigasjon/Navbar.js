@@ -1,5 +1,5 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import Register from '../Login/Register';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
 import SearchBar from './SearchBar';
@@ -19,16 +19,36 @@ const Ul = styled.ul`
   background-color: ${({ theme }) => theme.nav.background};
   height: 60px;
 `
+const Li = styled.li`
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  color: ${({ theme }) => theme.nav.buttons};
+  & a {
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: #ccc;
+    }
+    &.active {
+      text-decoration: underline;
+    }
+  }
+`;
 return (
-<nav>  
-
-  <Ul>  
+<nav>
+  <Ul>
+    <Li>
+      <NavLink exact to="/" activeClassName="active"> Home</NavLink>
+    </Li>
+    
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
       : null}
-  <SearchBar />
-  <Register />
-  </Ul>
 
+      <Li>
+      <NavLink exact to="/search/results/searching" activeClassName="active"> Search</NavLink>
+    </Li>
+    </Ul>
 </nav>
 
 )
