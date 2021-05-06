@@ -52,3 +52,4 @@ export const StyleDeluxe5 = styled.article`
 export const StyleDeluxe6 = styled.article`
   margin: 15px;
 `;
+
