@@ -52,8 +52,7 @@ return (
       <Li>
       <NavLink exact to="/search/results/searching" activeClassName="active"> Search</NavLink>
     </Li>
-    <SearchBar />
-    <Register />
+      <Register />
     </Ul>
 </nav>
 
