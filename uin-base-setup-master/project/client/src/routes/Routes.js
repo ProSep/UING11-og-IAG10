@@ -12,7 +12,7 @@ import SearchPage from '../pages/SearchPage';
 
 const Routes = () => (
   <Router>
-    <Navbar/>
+    <Navbar />
     <DefaultLayout>
       <Switch>
         <Route exact path="#">
@@ -22,7 +22,7 @@ const Routes = () => (
           <ProductPage />
         </Route>
         <Route exact path="/:slug">
-         <CategoryPage />
+          <CategoryPage />
         </Route>
         <Route path="/search/results/">
           <SearchPage />
