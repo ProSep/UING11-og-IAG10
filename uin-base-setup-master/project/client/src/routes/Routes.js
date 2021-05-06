@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import ProductPage from '../pages/ProductPage';
 import CategoryPage from '../pages/CategoryPage';
 import Navbar from '../components/content/Navigasjon/Navbar';
+import SearchPage from '../pages/SearchPage';
 
 /**
  * Her har jeg laget en "rute" til "/" og bruker Home komponenten i pages mappen
@@ -14,7 +15,7 @@ const Routes = () => (
     <Navbar/>
     <DefaultLayout>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="#">
           <Home />
         </Route>
         <Route exact path="/:katslug/:slug">
@@ -22,6 +23,9 @@ const Routes = () => (
         </Route>
         <Route exact path="/:slug">
          <CategoryPage />
+        </Route>
+        <Route path="/search/results/">
+          <SearchPage />
         </Route>
       </Switch>
     </DefaultLayout>

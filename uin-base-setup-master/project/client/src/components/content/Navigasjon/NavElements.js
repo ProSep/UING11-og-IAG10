@@ -25,7 +25,7 @@ const NavElements = () => {
   console.log(navitem);
   
   
-  return ({status}, navitem);
+  return {status},(navitem);
 }
 
 export default NavElements;

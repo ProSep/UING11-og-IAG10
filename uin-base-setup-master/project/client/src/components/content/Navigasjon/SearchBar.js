@@ -1,40 +1,42 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Route } from "react-router-dom";
+import styled from "styled-components";
 
-const SearchBar = () => {
-  const SearchBarStyle = {
-    width: '20rem',
-    background: '#1F1F1F1F',
-    border: 'none',
-    padding: '0.5rem',
-  };
+const SearchBarStyle = styled.input`
+  width: "20rem";
+  background: "#1F1F1F1F";
+  border: "none";
+  padding: "0.5rem";
+`;
 
-  const [search, setSearch] = useState('');
+const SearchBar = ({ onSubmit }) => {
+
+  const [search, setSearch] = useState();
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(search);
+    onSubmit(search);
   };
 
+
   return (
-    { search },
-    (
       <>
+      <Route render={({ history}) => (
         <form onSubmit={handleSubmit}>
-          <input
+          <SearchBarStyle
             type="text"
             onChange={handleChange}
             value={search}
-            style={SearchBarStyle}
             placeholder="Search..."
             id="search"
           />
-          <button type="submit">🔍</button>
+          <button type='submit'onClick={() => { history.push(`/search/results/${search}`) }}>🔍</button>
         </form>
+        )} />
       </>
-    )
   );
 };
 export default SearchBar;

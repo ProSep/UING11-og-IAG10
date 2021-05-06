@@ -7,7 +7,7 @@ const CategoryPage = () => {
   return (
     <>
       <Category whatContent={getKategori}/>
-      <Products />
+      <Products/>
     </>
   );
 };
