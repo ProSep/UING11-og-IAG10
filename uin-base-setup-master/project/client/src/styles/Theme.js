@@ -1,11 +1,12 @@
+import { ClientError } from '@sanity/client';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 
 // Her må du legge til egne verdier
 const theme = {
   nav: {
-    background: "pink",
-    buttons: "black",
+    background: 'black',
+    buttons: 'white',
   },
 };
 

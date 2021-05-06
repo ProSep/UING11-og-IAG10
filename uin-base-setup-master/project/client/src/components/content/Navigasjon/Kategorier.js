@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Li = styled.li`
   font-family: sans-serif;
@@ -10,7 +10,8 @@ const Li = styled.li`
     text-decoration: none;
     color: inherit;
     &:hover {
-      color: #ccc;
+      color: #342e38;
+      background-color: #fff;
     }
     &.active {
       text-decoration: underline;
@@ -20,7 +21,10 @@ const Li = styled.li`
 
 const Kategorier = ({ kategori, slug }) => (
   <Li key={slug}>
-    <NavLink exact to={`/${slug}`} activeClassName="active"> {kategori}</NavLink>
+    <NavLink exact to={`/${slug}`} activeClassName="active">
+      {' '}
+      {kategori}
+    </NavLink>
   </Li>
 );
 
