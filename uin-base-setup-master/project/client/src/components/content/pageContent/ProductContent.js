@@ -6,32 +6,57 @@ import SingleItemFetch from "../singelItemFetch";
 
     const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 40% 20% auto;
+    grid-template-rows: 20% 25% 25% auto;
     grid-gap: 5px;
     `;
 
     const ProduktTittel = styled.h1`
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    padding: .5rem;
-    grid-row: 2 / span 2;
-    grid-column: 3rem / span 1;
+    text-align: center;
+    font-size: 3rem;
+    outline: 1px solid transparent;
+    margin-top: 4.2rem;
+    font-weight: 900;
+    line-height: 1.125;
+    text-transform: uppercase;
+    font-style: italic;
+    display: grid;
+    grid-area: 1 / 2;
+    
+
     `;
 
+    const TitleBox = styled.div`
+    width: 800px;
+    margin-left: 4rem;
+    display: grid;
+    grid-area: 4 / 1;
+    `;
+
+    const ProduktForfatter = styled.h2`
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 11rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: grid;
+    grid-area: 1 / 2;
+    `; 
+
     const ProduktDetaljer = styled.h2`
-    display: flex;
-    justify-content: center;
-    padding: .5rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: grid;
+    grid-area: 4 / 2;
     `; 
 
     const ProduktBilde = styled.img`
-    display: flex;
-    justify-content: center;
-    padding: .5rem;
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 2;
+    padding: 3.5rem;
+    display: grid;
+    margin-left: 20rem;
     `;
 
 const Product = ({whatContent}) => {
@@ -49,13 +74,13 @@ const Product = ({whatContent}) => {
     <>
     <Grid>
     <ProduktTittel>{data?.tittel}</ProduktTittel>
-    <ProduktDetaljer>{data?.detaljer}</ProduktDetaljer>
-    <ProduktDetaljer>{data?.forfatter}</ProduktDetaljer>
+    <ProduktForfatter>{data?.forfatter}</ProduktForfatter>
     {data?.bilde ? (
-        <ProduktBilde src={urlFor(data.bilde).width(800).format('webp').url()}
+        <ProduktBilde src={urlFor(data.bilde).width(400).format('webp').url()}
         alt={data.bilde.beskrivelse} />
     ): null}
-    </Grid>
+      <TitleBox><ProduktDetaljer>{data?.detaljer}</ProduktDetaljer></TitleBox>
+      </Grid>
     </>
     )};
 

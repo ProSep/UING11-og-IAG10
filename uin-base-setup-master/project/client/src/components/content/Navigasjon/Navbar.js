@@ -20,13 +20,15 @@ const Ul = styled.ul`
   height: 60px;
 `
 return (
-<nav>
-  <Ul>
+<nav>  
+
+  <Ul>  
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
       : null}
-  </Ul>
   <SearchBar />
   <Register />
+  </Ul>
+
 </nav>
 
 )
