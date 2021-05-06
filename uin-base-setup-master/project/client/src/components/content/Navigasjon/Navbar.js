@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
+import Register from '../Login/Register';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
 import SearchBar from './SearchBar';
@@ -36,6 +37,7 @@ const Li = styled.li`
   }
 `;
 return (
+
 <nav>
   <Ul>
     <Li>
@@ -48,6 +50,8 @@ return (
       <Li>
       <NavLink exact to="/search/results/searching" activeClassName="active"> Search</NavLink>
     </Li>
+    <SearchBar />
+    <Register />
     </Ul>
 </nav>
 
