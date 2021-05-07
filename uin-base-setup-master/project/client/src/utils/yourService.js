@@ -8,7 +8,9 @@ const productInfo = `
   'kategori': kategori->kategori,
   'kslug': kategori->slug.current,
   'forfatter': forfatter->forfatter,
-  'bilde': bilde{beskrivelse, asset->{url}}
+  'bilde': bilde{beskrivelse, asset->{url}},
+  price,
+  "sjangerer":sjanger[]->slug.current
 `;
 
 const kategoriInfo = `
@@ -24,7 +26,7 @@ export const getKategori = async (slug) => {
 
 //All kategories for navbar
 export const getKategoris = async () => {
-  const data = await client.fetch(`*[_type == "kategori"]{${kategoriInfo}}`);
+  const data = await client.fetch(`*[_type == "kategori"] | order(kategori){${kategoriInfo}}`);
   return data;
 };
 

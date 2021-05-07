@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 import Register from '../Login/Register';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
-import SearchBar from './SearchBar';
 
 const Navbar = () => {
 
