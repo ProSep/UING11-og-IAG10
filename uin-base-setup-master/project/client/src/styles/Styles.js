@@ -4,14 +4,19 @@ import styled from 'styled-components/macro';
 
 // This will affect the elements in the specific pages in Pages-folder
 export const Container = styled.section`
-  background-color: #000;
-  border: 3px solid #ed8b00;
-  height: 65px;
-  padding-right: 66rem;
-  padding-left: 66rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin: 20px;
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0 auto 0 auto;
+  @media (min-width: 1200px) {
+    width: 1160px;
+  }
+  @media (min-width: 900px) {
+    width: 960px;
+  }
+  /* 780px */
+  /* 740px */
+  @media (min-width: 1060px) {
+    width: 1060px;
+  } ;
 `;
 
 // Styling for the content (which can also be used for all the pages)
@@ -52,4 +57,3 @@ export const StyleDeluxe5 = styled.article`
 export const StyleDeluxe6 = styled.article`
   margin: 15px;
 `;
-

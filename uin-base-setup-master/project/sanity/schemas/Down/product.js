@@ -58,17 +58,6 @@ export default {
       type: 'localeString',
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {type: ''},
-        },
-      ],
-    },
-    {
       name: 'body',
       title: 'Body',
       type: 'localeBlockContent',

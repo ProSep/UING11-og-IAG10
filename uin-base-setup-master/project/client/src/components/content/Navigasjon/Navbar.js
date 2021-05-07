@@ -19,6 +19,7 @@ const Ul = styled.ul`
   margin-top: 15vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: ${({ theme }) => theme.nav.background};
   height: 60px;
 `
