@@ -66,10 +66,10 @@ const Product = ({whatContent}) => {
         <>
     <Grid>
     <Box2>
-        <Title>
-    {data?.tittel}
-    {data?.forfatter}
-        </Title>
+        
+    <Title>{data?.tittel}</Title>
+    <Title>{data?.forfatter}</Title>
+        
     </Box2>
     <Box1>{data?.bilde ? (
         <ProduktBilde src={urlFor(data.bilde).width(400).format('webp').url()}
