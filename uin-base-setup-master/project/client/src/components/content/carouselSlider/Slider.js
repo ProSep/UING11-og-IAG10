@@ -43,10 +43,10 @@ const Slider = () => {
       ))}
 
       <button id="goLeft" onClick={goLeft}>
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+        <FontAwesomeIcon icon={faArrowAltCircleLeft} size="3x" />
       </button>
       <button id="goRight" onClick={goRight}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} />
+        <FontAwesomeIcon icon={faArrowAltCircleRight} size="3x" />
       </button>
     </div>
   );

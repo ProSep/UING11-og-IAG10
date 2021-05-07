@@ -1,9 +1,8 @@
 import styled from 'styled-components/macro';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faHome } from '@fortawesome/free-solid-svg-icons';
 import headerLogo from '../ImagesForPages/outland-header.jpg';
+
 
 const Navbar = () => {
 
@@ -25,7 +24,7 @@ const Ul = styled.ul`
 `
 return (
 <nav>
-  <img src={headerLogo} height='55px' />
+<img src={headerLogo} height="66px" />
   <>
   <Ul>
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
