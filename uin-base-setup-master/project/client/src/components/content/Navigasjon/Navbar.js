@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
-import SearchBar from './SearchBar';
 
 const Navbar = () => {
 
@@ -18,6 +17,7 @@ const Ul = styled.ul`
   margin-top: 15vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: ${({ theme }) => theme.nav.background};
   height: 60px;
 `
