@@ -38,17 +38,29 @@ export const StyleDeluxe3 = styled.section`
   height: 100px;
 `;
 
-// Styling for Boxes, Box, BoxContent section//
-export const StyleDeluxe4 = styled.section`
-  font-size: 44px;
-  color: white;
-`;
-
 export const StyleDeluxe5 = styled.article`
   margin: auto;
   margin-top: 25px;
 `;
 
 export const StyleDeluxe6 = styled.article`
-  margin: 15px;
+  margin: 10px;
 `;
+
+export const StyledFooter = styled.article`
+  padding: 44px;
+  text-align: center;
+  background-color: #000;
+  color: white;
+`;
+
+export const StyleHorizontalLine = styled.article`
+  margin-left: 111px;
+`;
+
+/* export const StyledNav = styled.nav`
+  width: 154rem;
+`;
+*/
+
+// <img src={horizonLine} />

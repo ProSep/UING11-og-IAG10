@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import './slider.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+} from '@fortawesome/free-solid-svg-icons';
 import ImgComps from './ImgComps';
 import img1 from './img/ramune-banner1-outland.png';
 import img2 from './img/brands-twd.jpg';
 import img3 from './img/ushio-and-tora-edit.jpg';
 import img4 from './img/xvalhall-samleboks-banner1.jpg';
 import img5 from './img/geeky-stuff.jpg';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Slider = () => {
   const sliderArr = [
@@ -34,13 +41,12 @@ const Slider = () => {
           {item}
         </div>
       ))}
+
       <button id="goLeft" onClick={goLeft}>
-        left
-        <i className="fas fa-chevron-circle-left" />
+        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
       </button>
       <button id="goRight" onClick={goRight}>
-        right
-        <i className="fas fa-chevron-circle-right" />
+        <FontAwesomeIcon icon={faArrowAltCircleRight} />
       </button>
     </div>
   );

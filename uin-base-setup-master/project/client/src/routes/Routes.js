@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import ProductPage from '../pages/ProductPage';
 import CategoryPage from '../pages/CategoryPage';
 import Navbar from '../components/content/Navigasjon/Navbar';
+import Footer from '../components/Footer';
 
 /**
  * Her har jeg laget en "rute" til "/" og bruker Home komponenten i pages mappen
@@ -25,6 +26,7 @@ const Routes = () => (
         </Route>
       </Switch>
     </DefaultLayout>
+    <Footer />
   </Router>
 );
 
