@@ -9,6 +9,27 @@ export const Container = styled.section`
 `;
 
 export const ProductsArea = styled.section`
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  height: auto;
+`;
+
+export const NavButton = styled.li`
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  color: ${({ theme }) => theme.colors.buttons};
+  & a {
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: #342e38;
+      background-color: #fff;
+    }
+    &.active {
+      text-decoration: underline;
+    }
   }
 `;

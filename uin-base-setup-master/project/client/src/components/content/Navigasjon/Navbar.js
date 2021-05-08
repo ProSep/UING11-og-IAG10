@@ -3,57 +3,47 @@ import styled from 'styled-components/macro';
 import Register from '../Login/Register';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
+import { NavButton } from '../../../styles/Styles';
+import SearchFetch from './SearchFetch';
+
+// export const Navstatus = () => {
+//   const {status}  = NavElements();
+
+//   if (status === 'loading') return <p>Loading...</p>;
+//   if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;
+// };
 
 const Navbar = () => {
 
-const navitem  = NavElements()
-;
-
-console.log(navitem);
+const navitem  = NavElements();`
 
 if (status === 'loading') return <p>Loading...</p>;
-if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;
+//   if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;`
+
+console.log(navitem);
 
 const Ul = styled.ul`
   margin-top: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.nav.background};
+  background-color: ${({ theme }) => theme.colors.background};
   height: 60px;
 `
-const Li = styled.li`
-  font-family: sans-serif;
-  font-size: 2.2rem;
-  color: ${({ theme }) => theme.nav.buttons};
-  & a {
-    padding: 2rem;
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      color: #ccc;
-    }
-    &.active {
-      text-decoration: underline;
-    }
-  }
-`;
 return (
 
 <nav>
   <Ul>
-    <Li>
+    <NavButton>
       <NavLink exact to="/" activeClassName="active"> Home</NavLink>
-    </Li>
+    </NavButton>
     
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
       : null}
-
-      <Li>
-      <NavLink exact to="/search/results/searching" activeClassName="active"> Search</NavLink>
-    </Li>
       <Register />
+      <SearchFetch />
     </Ul>
+    
 </nav>
 
 )

@@ -13,7 +13,6 @@ const NavElements = () => {
         const content = await getKategoris();
         setNavitem(content);
         setStatus('initial');
-        console.log(navitem);
       } catch (error) {
         setStatus('error');
         setNavitem(error);
@@ -25,7 +24,7 @@ const NavElements = () => {
   console.log(navitem);
   
   
-  return {status},(navitem);
+  return { status }, navitem;
 }
 
 export default NavElements;
