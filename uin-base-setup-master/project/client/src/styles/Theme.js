@@ -5,9 +5,13 @@ import { GlobalStyles } from './Global';
 // Her må du legge til egne verdier
 const theme = {
   colors: {
-    background: 'black',
-    buttons: 'white',
+    dark: 'rgb(32,28,28)',
+    light: 'rgba(254,254,255,255)',
+    brownish: 'rgba(249,249,249,255)',
   },
+  font: {
+    title: 'sans-serif',
+  }
 };
 
 const Theme = ({ children }) => (

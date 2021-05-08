@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 import SearchRender from "./SearchRender";
 
 const SearchFetch = () => {
-  const {setSearchp} = useContext(SearchContext);
+  const {searchp, setSearchp} = useContext(SearchContext);
   const [status, setStatus] = useState(null);
 
   const onSubmit = async (search) => {

@@ -1,13 +1,34 @@
 import { useState } from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
+import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 
 const SearchBarStyle = styled.input`
-  width: "20rem";
-  background: "#1F1F1F1F";
-  border: "none";
-  padding: "0.5rem";
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 100%;
 `;
+
+const Button = styled.button`
+  background: white;
+  color: black;
+  border: none;
+  display: inline-block;
+  align-self: flex-end;
+`
+
+const SearchAndButton = styled.form`
+  background-color: white;
+  border: 2px solid black;
+  width: 20%;
+  padding: 8px;
+  align-items: center;
+  display: flex;
+`
 
 const SearchBar = ({ onSubmit }) => {
 
@@ -25,7 +46,7 @@ const SearchBar = ({ onSubmit }) => {
   return (
       <>
       <Route render={({ history}) => (
-        <form onSubmit={handleSubmit}>
+        <SearchAndButton onSubmit={handleSubmit}>
           <SearchBarStyle
             type="text"
             onChange={handleChange}
@@ -33,8 +54,8 @@ const SearchBar = ({ onSubmit }) => {
             placeholder="Search..."
             id="search"
           />
-          <button type='submit'onClick={() => { history.push(`/search/results/${search}`) }}>🔍</button>
-        </form>
+          <Button type='submit'onClick={() => { history.push(`/search/results/${search}`) }}><SearchOutlinedIcon fontSize="large"/></Button>
+        </SearchAndButton>
         )} />
       </>
   );

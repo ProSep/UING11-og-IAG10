@@ -17,16 +17,17 @@ export const ProductsArea = styled.section`
 `;
 
 export const NavButton = styled.li`
-  font-family: sans-serif;
+  font-family: ${({ theme }) => theme.font.title};
   font-size: 2.2rem;
-  color: ${({ theme }) => theme.colors.buttons};
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.light};
   & a {
     padding: 2rem;
     text-decoration: none;
     color: inherit;
     &:hover {
-      color: #342e38;
-      background-color: #fff;
+      color: ${({ theme }) => theme.colors.dark};
+      background-color: ${({ theme }) => theme.colors.light};
     }
     &.active {
       text-decoration: underline;

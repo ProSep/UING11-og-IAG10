@@ -12,12 +12,12 @@ const Routes = () => {
   const [searchp, setSearchp] = useState(null);
   return (
     <Router>
-      <SearchContext.Provider value={{ setSearchp }}>
+      <SearchContext.Provider value={{ searchp, setSearchp }}>
         <Navbar />
       </SearchContext.Provider>
       <DefaultLayout>
         <Switch>
-          <Route exact path="#">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/:katslug/:slug">
