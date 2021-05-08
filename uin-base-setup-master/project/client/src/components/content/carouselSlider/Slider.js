@@ -6,9 +6,9 @@ import {
   faArrowAltCircleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import ImgComps from './ImgComps';
-import img1 from './img/ramune-banner1-outland.png';
-import img2 from './img/brands-twd.jpg';
-import img3 from './img/ushio-and-tora-edit.jpg';
+import img1 from './img/xsakura-banner1.jpg';
+import img2 from './img/xgamle-gubber-2-banner2-outland.jpg';
+import img3 from './img/ramune-banner1-outland.png';
 import img4 from './img/xvalhall-samleboks-banner1.jpg';
 import img5 from './img/geeky-stuff.jpg';
 import 'slick-carousel/slick/slick.css';
@@ -43,10 +43,10 @@ const Slider = () => {
       ))}
 
       <button id="goLeft" onClick={goLeft}>
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} size="3x" />
+        <FontAwesomeIcon icon={faArrowAltCircleLeft} size="4x" />
       </button>
       <button id="goRight" onClick={goRight}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} size="3x" />
+        <FontAwesomeIcon icon={faArrowAltCircleRight} size="4x" />
       </button>
     </div>
   );
