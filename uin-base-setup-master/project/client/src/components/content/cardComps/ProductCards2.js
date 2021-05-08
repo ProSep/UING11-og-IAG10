@@ -1,5 +1,5 @@
 import React from 'react';
-import './productcards.css';
+import './productcards2.css';
 import Error404 from '../ImagesForPages/404.jpg';
 
 const ProductsCards = ({ title, body }) => (

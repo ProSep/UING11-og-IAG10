@@ -38,6 +38,11 @@ export const StyleDeluxe3 = styled.section`
   height: 100px;
 `;
 
+export const HeaderStyling = styled.header`
+  padding: 1vh;
+  margin-left: 86px;
+`;
+
 export const StyleDeluxe5 = styled.article`
   margin: auto;
   margin-top: 25px;

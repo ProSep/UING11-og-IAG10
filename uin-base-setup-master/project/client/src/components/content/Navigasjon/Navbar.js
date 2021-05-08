@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro';
 import Kategorier from './Kategorier';
 import NavElements from './NavElements';
-import headerLogo from '../ImagesForPages/outland-header.jpg';
-
+import headerlogo from '../ImagesForPages/outland-header-edit-transparent.jpg';
+import { HeaderStyling } from '../../../styles/Styles';
 
 const Navbar = () => {
 
@@ -24,7 +24,9 @@ const Ul = styled.ul`
 `
 return (
 <nav>
-<img src={headerLogo} height="66px" />
+  <HeaderStyling>
+<img src={headerlogo} />
+</HeaderStyling>
   <>
   <Ul>
       {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)

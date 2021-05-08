@@ -1,9 +1,7 @@
 import React from 'react';
-import {
-  faArrowAltCircleLeft,
-  faArrowAltCircleRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './productcards.css';
 
 const Card = (props) => {
   const newClassName = `color_bg ${props.alt}`;
@@ -16,12 +14,14 @@ const Card = (props) => {
         <div className="card_img" style={{ backgroundImage: bg_img }} />
         <div className="cardInfo">
           <h2>{title}</h2>
+          <p>
+            This paragraph is just a test, there will be production cards here!
+          </p>
           <p className="price">{price}</p>
         </div>
-        <div className="cart">
-          <div>
-            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-          </div>
+        <div className="cart" />
+        <div>
+          <FontAwesomeIcon icon={faShoppingCart} size="4x" />
         </div>
       </div>
     </div>
@@ -29,3 +29,7 @@ const Card = (props) => {
 };
 
 export default Card;
+
+/* <div>
+<FontAwesomeIcon icon={fa} />
+</div> */

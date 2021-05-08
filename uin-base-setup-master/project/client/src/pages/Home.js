@@ -13,6 +13,7 @@ const Home = () => (
     <Slider />
     <Products />
     <ProductCards />
+
     <StyleHorizontalLine>
       <img src={horizonLine} />
     </StyleHorizontalLine>

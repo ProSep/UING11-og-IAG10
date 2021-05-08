@@ -1,26 +1,33 @@
 import Card from './Card';
-import ImgProduct1 from '../ImagesForPages/404.jpg';
+import './productcards.css';
+import proImg1 from '../ImagesForPages/pikachu-fig-skeleton.jpg';
 
 const ProductCards = () => (
   <div className="product-card-container">
     <div className="row">
       <Card
-        title="gdsgdsagdasgh"
-        image="../ImagesForPages/404.jpg"
+        title="This production card title is connected to CARD.js"
+        image={proImg1}
         price="50kr"
-        alt="dofnhfdknh"
+        alt="pikachu half skeleton"
       />
       <Card
         title="gdsgdsagdasgh"
-        image="../ImagesForPages/404.jpg"
+        image="../ImagesForPages/kaiju-png-kaiju-pacific-rim-png.png"
         price="50kr"
-        alt="dofnhfdknh"
+        alt="kaiju"
       />
       <Card
         title="erhgshsrhshhs"
-        image="../ImagesForPages/404.jpg"
+        image="../ImagesForPages/ushio-and-tora.jpg"
         price="50kr"
-        alt="dofnhfdknh"
+        alt="ushio and tora"
+      />
+      <Card
+        title="erhgshsrhshhs"
+        image="../ImagesForPages/yautja-figure.jpg"
+        price="50kr"
+        alt="yautja"
       />
     </div>
   </div>
