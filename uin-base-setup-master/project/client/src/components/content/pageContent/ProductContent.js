@@ -165,7 +165,12 @@ const FakeButton = styled.button`
     padding: 1rem;
     text-transform: uppercase;
     transition: ease .3s;
+    color: white;
     background: ${({ theme }) => theme.colors.red };
+    :hover {  
+    background-color: red;
+    color: white;
+}
 `;
     
     const DetaljeFooter = styled.p`
