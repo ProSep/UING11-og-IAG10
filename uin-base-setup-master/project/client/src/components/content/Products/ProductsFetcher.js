@@ -11,7 +11,7 @@ const ProductsFetcher = () => {
     const proData = async () => {
       setStatus('loading');
       try {
-        const content = await getProducts( slug );
+        const content = await getProducts(slug);
         setProdukts(content);
         setStatus('initial');
       } catch (error) {
@@ -22,11 +22,10 @@ const ProductsFetcher = () => {
       }
     };
     proData();
-  }, [ slug ]);
+  }, [slug]);
   console.log(produkts);
-  
-  
-  return ({status}, produkts);
-}
+
+  return { status }, produkts;
+};
 
 export default ProductsFetcher;

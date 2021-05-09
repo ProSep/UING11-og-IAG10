@@ -1,0 +1,12 @@
+.grid-styling {
+    display: grid;
+    background-color: rgb(231, 231, 231);
+    height: 17vh;
+    width: 88vw;
+    margin: auto;
+    border: 1px solid rgb(223, 43, 133);
+    border-radius: 5px;
+}
+.article {
+
+}

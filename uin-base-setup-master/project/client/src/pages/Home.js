@@ -13,13 +13,13 @@ const Home = () => (
   <>
     <HomeContent />
     <Slider />
-    <Products />
     <GridLayout />
-    <ProductCards />
-
+    <Products />
     <StyleHorizontalLine>
       <img src={horizonLine} />
     </StyleHorizontalLine>
+    <ProductCards />
+    <Products />
     <ProductCards2 />
   </>
 );

@@ -10,7 +10,6 @@ import img1 from './img/xsakura-banner1.jpg';
 import img2 from './img/xgamle-gubber-2-banner2-outland.jpg';
 import img3 from './img/ramune-banner1-outland.png';
 import img4 from './img/xvalhall-samleboks-banner1.jpg';
-import img5 from './img/geeky-stuff.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -20,7 +19,6 @@ const Slider = () => {
     <ImgComps src={img2} />,
     <ImgComps src={img3} />,
     <ImgComps src={img4} />,
-    <ImgComps src={img5} />,
   ];
   const [x, setX] = useState(0);
   const goLeft = () => {

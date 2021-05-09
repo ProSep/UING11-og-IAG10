@@ -7,6 +7,7 @@ const Div = styled.div`
   max-width: 450px;
   padding: 5px;
   margin: 5px;
+  border-radius: 10px;
   text-align: center;
   font-family: arial;
 `;
