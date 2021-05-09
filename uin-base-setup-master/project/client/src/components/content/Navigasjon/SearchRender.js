@@ -1,26 +1,20 @@
-import styled from 'styled-components/macro';
+import { useContext } from 'react';
+import { ProductsArea } from '../../../styles/Styles';
+import { SearchContext } from '../../../utils/SearchContext';
 import ProductsLayout from '../Products/ProductsLayout';
-import SearchFetch from './SearchFetch';
 
-const Div = styled.div`
-  display: flex;
-  align-items: center;
-  height: auto;
-  margin: 30px 10px 50px 50px;
-`
 
-const SearchRender = ({produkts}) => {
+const SearchRender = () => {
 
-console.log(produkts);
+  const {searchp} = useContext(SearchContext);
 
-if (status === 'loading') return <p>Loading...</p>;
-if (status === 'error') return <p>Noe gikk galt når data ble hentet. {produkts?.message}</p>;
+console.log(searchp);
 
 return (
-  <Div>
-      {produkts?.length > 0 ? produkts.map((produkts) => <ProductsLayout key={produkts.slug} {...produkts} />)
+  <ProductsArea>
+      {searchp?.length > 0 ? searchp.map((searchp) => <ProductsLayout key={searchp.slug} {...searchp} />)
       : null}
-  </Div>
+  </ProductsArea>
 )
 };
 

@@ -1,16 +1,21 @@
-import { StyleDeluxe3 } from '../styles/Styles';
+import styled from "styled-components";
 
-const Footie = () => (
-  <StyleDeluxe3>
+const FooterContainter = styled.section`
+  background: ${({ theme }) => theme.colors.background};
+  margin-top: 200px;
+`
+
+const Footer = () => (
+  <FooterContainter>
     <div className="footer-container">
       <div className="content-wrap">
         <p>THIS IS A FOOTER STILL IN UNDER CONSTRUCTION!</p>
         <p>skgnsdkdsgsgn</p>
       </div>
     </div>
-  </StyleDeluxe3>
+  </FooterContainter>
 );
 
-export default Footie;
+export default Footer;
 
 /* don't for get to create the Footer own separate */

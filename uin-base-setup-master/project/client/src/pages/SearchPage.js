@@ -1,17 +1,16 @@
-import SearchBar from '../components/content/Navigasjon/SearchBar';
-import SearchFetch from '../components/content/Navigasjon/SearchFetch';
 import SearchRender from '../components/content/Navigasjon/SearchRender';
 import Category from '../components/content/pageContent/categoryContent';
+import { Container } from '../styles/Styles';
 import { getKategori } from '../utils/yourService';
 
 
-const searchPage = () => {
+const SearchPage = () => {
   return (
-    <>
+    <Container>
       <Category whatContent={getKategori}/>
-      <SearchFetch />
-    </>
+      <SearchRender/>
+    </Container>
   );
 };
 
-export default searchPage;
+export default SearchPage;

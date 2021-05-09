@@ -9,6 +9,28 @@ export const Container = styled.section`
 `;
 
 export const ProductsArea = styled.section`
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  height: auto;
+`;
+
+export const NavButton = styled.li`
+  font-family: ${({ theme }) => theme.font.title};
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.light};
+  & a {
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: ${({ theme }) => theme.colors.dark};
+      background-color: ${({ theme }) => theme.colors.light};
+    }
+    &.active {
+      text-decoration: underline;
+    }
   }
 `;

@@ -1,62 +1,60 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components/macro';
-import Register from '../Login/Register';
-import Kategorier from './Kategorier';
-import NavElements from './NavElements';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components/macro";
+import Register from "../Login/Register";
+import Kategorier from "./Kategorier";
+import NavElements from "./NavElements";
+import { NavButton } from "../../../styles/Styles";
+import SearchFetch from "./SearchFetch";
 
-const Navbar = () => {
-
-const navitem  = NavElements()
-;
-
-console.log(navitem);
-
-if (status === 'loading') return <p>Loading...</p>;
-if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;
-
-const Ul = styled.ul`
-  margin-top: 15vh;
-  display: flex;
+const HeaderBox = styled.section`
+  background-color: white;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.nav.background};
-  height: 60px;
-`
-const Li = styled.li`
-  font-family: sans-serif;
-  font-size: 2.2rem;
-  color: ${({ theme }) => theme.nav.buttons};
-  & a {
-    padding: 2rem;
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      color: #ccc;
-    }
-    &.active {
-      text-decoration: underline;
-    }
-  }
+  padding: 30px;
+  display: flex;
 `;
-return (
 
-<nav>
-  <Ul>
-    <Li>
-      <NavLink exact to="/" activeClassName="active"> Home</NavLink>
-    </Li>
-    
-      {navitem?.length > 0 ? navitem.map((navitem) => <Kategorier key={navitem.slug} {...navitem} />)
-      : null}
+const Ul = styled.ul`
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: ${({ theme }) => theme.colors.dark};
+height: 50px;
+`;
 
-      <Li>
-      <NavLink exact to="/search/results/searching" activeClassName="active"> Search</NavLink>
-    </Li>
-      <Register />
-    </Ul>
-</nav>
+const Navbar = () => {
+  const navitem = NavElements();
+  `
 
-)
+if (status === 'loading') return <p>Loading...</p>;
+//   if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;`;
+
+  console.log(navitem);
+
+
+  return (
+    <header>
+      <HeaderBox>
+        <SearchFetch />
+      </HeaderBox>
+      <nav>
+        <Ul>
+          <NavButton>
+            <NavLink exact to="/" activeClassName="active">
+              {" "}
+              Home
+            </NavLink>
+          </NavButton>
+          {navitem?.length > 0
+            ? navitem.map((navitem) => (
+                <Kategorier key={navitem.slug} {...navitem} />
+              ))
+            : null}
+          <Register />
+        </Ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;
