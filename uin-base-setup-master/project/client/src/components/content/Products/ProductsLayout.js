@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { urlFor } from "../../../utils/imageHandler";
 
 const ProductBoxGrid = styled.section`
+  display: grid;
+  grid-template-rows: auto auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  display: block;
   height: 100%;
   overflow: hidden;
-  width:100%;
+  width: 300px;
   position: relative;
   border-radius: 15px;
   padding: 5%;
@@ -19,14 +20,15 @@ const ProductBoxGrid = styled.section`
 
 const ProductBoxList = styled.section`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  height: 250px;
   overflow: hidden;
   width:100%;
   position: relative;
   border-radius: 15px;
-  padding: 5%;
+  padding: 2%;
   transition-duration: 0.3s;
   :hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
@@ -37,23 +39,36 @@ const ProductImageGrid = styled.img`
   justify-content: center;
   margin: 0 auto 0 auto;
   width: 80%;
-  display: block;
+  display: inline-block;
+  grid-row: 1;
 `;
 
 const ProductImageList = styled.img`
   margin: 0 0 0 0;
-  height: 100px;
+  height: 210px;
   width: auto;
   display: block;
+  grid-column: 1;
 `;
 
-const ProductInfo = styled.section`
-  justify-content: center;
+const ProductInfoGrid = styled.section`
   margin: 1rem 0 0 0;
   height: 80%;
   display: block;
   text-decoration: none;
+  grid-row: 2;
+  
 `;
+
+const ProductInfoList = styled.section`
+  margin: 1rem 0 0 0;
+  height: 80%;
+  display: block;
+  text-decoration: none;
+  grid-column: 2;
+`;
+
+
 
 const ProductH2 = styled.h2`
   font-size: 2rem;
@@ -96,23 +111,24 @@ const ProductsLayout = ({
   price,
   sjangerer
 }) => (
-  <ProductBoxList>
-    <Link to={`/${kslug}/${slug}`} className={slug} style={{ textDecoration: 'none' }}>
+  <Link to={`/${kslug}/${slug}`} className={slug} style={{ textDecoration: 'none' }}>
+    <ProductBoxGrid>
     {bilde ? (
-        <ProductImageList
+        <ProductImageGrid
           src={urlFor(bilde).width(240).height(340).format("webp").url()}
           alt={bilde.beskrivelse}
         />
       ) : null}
-      <ProductInfo>
+      <ProductInfoGrid>
         <ProductH2>{tittel}</ProductH2>
         <ProductP>{sjangerer} {sjangerer} {sjangerer}</ProductP>
         <ProductP>{forfatter}</ProductP>
         <PrisTextP>PRIS PÅ NETT</PrisTextP>
         <PrisP>{price} KR</PrisP>
-      </ProductInfo>
+      </ProductInfoGrid>
+      </ProductBoxGrid>
     </Link>
-  </ProductBoxList>
+
 );
 
 export default ProductsLayout;

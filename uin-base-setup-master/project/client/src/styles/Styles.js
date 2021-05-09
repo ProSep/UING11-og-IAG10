@@ -18,7 +18,7 @@ export const ProductsArea = styled.section`
 
 export const ProductsAreaList = styled.section`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-items: center;
   height: auto;
