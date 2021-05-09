@@ -26,7 +26,7 @@ const SectionBox3 = styled.div`
 
 const SectionBox4 = styled.div`
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 2;
     grid-row: 2;
     `;
 
@@ -51,8 +51,7 @@ const VolumBoks = styled.section`
     width: 350px;
     border-radius: 15px;
     padding: 5%;
-    margin-top: 29.5rem;
-    font-weight: 450;
+    margin-top: 29.65rem;
     `;
 
 const Title = styled.h1`
@@ -142,6 +141,7 @@ const InfoBox = styled.div`
 const KlikkOgVelg = styled.h2`
     font-weight: 500;
     font-size: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 `;
 
