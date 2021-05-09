@@ -43,12 +43,3 @@
     background: none;
     border: none;
 }
-
-button {
-    background-color: red;
-    color: white;
-}
-button:hover {
-    background-color: rgb(54, 9, 9);
-    color: red
-}

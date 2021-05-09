@@ -2,32 +2,55 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { urlFor } from "../../../utils/imageHandler";
 
-const ProductBox = styled.section`
+const ProductBoxGrid = styled.section`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   display: block;
-  align-items: center;
   height: 100%;
   overflow: hidden;
   width:100%;
   position: relative;
   border-radius: 15px;
   padding: 5%;
+  transition-duration: 0.3s;
   :hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
   }
 `;
 
-const ProductImage = styled.img`
+const ProductBoxList = styled.section`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width:100%;
+  position: relative;
+  border-radius: 15px;
+  padding: 5%;
+  transition-duration: 0.3s;
+  :hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  }
+`;
+
+const ProductImageGrid = styled.img`
   justify-content: center;
   margin: 0 auto 0 auto;
   width: 80%;
   display: block;
 `;
 
+const ProductImageList = styled.img`
+  margin: 0 0 0 0;
+  height: 100px;
+  width: auto;
+  display: block;
+`;
+
 const ProductInfo = styled.section`
   justify-content: center;
-  margin: 1rem auto 0 auto;
-  width: 80%;
+  margin: 1rem 0 0 0;
+  height: 80%;
   display: block;
   text-decoration: none;
 `;
@@ -64,7 +87,6 @@ const PrisP = styled.p`
   font-weight: bold;
 `
 
-
 const ProductsLayout = ({
   tittel,
   slug,
@@ -72,23 +94,25 @@ const ProductsLayout = ({
   bilde,
   kslug,
   price,
+  sjangerer
 }) => (
-  <ProductBox>
+  <ProductBoxList>
     <Link to={`/${kslug}/${slug}`} className={slug} style={{ textDecoration: 'none' }}>
     {bilde ? (
-        <ProductImage
+        <ProductImageList
           src={urlFor(bilde).width(240).height(340).format("webp").url()}
           alt={bilde.beskrivelse}
         />
       ) : null}
       <ProductInfo>
         <ProductH2>{tittel}</ProductH2>
+        <ProductP>{sjangerer} {sjangerer} {sjangerer}</ProductP>
         <ProductP>{forfatter}</ProductP>
         <PrisTextP>PRIS PÅ NETT</PrisTextP>
         <PrisP>{price} KR</PrisP>
       </ProductInfo>
     </Link>
-  </ProductBox>
+  </ProductBoxList>
 );
 
 export default ProductsLayout;

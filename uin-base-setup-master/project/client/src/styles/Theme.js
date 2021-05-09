@@ -11,6 +11,9 @@ const theme = {
   },
   font: {
     title: 'sans-serif',
+  },
+  scale: {
+
   }
 };
 
