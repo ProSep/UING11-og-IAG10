@@ -8,13 +8,12 @@ const theme = {
     dark: 'rgb(32,28,28)',
     light: 'rgba(254,254,255,255)',
     brownish: 'rgba(249,249,249,255)',
+    red: 'rgb(247, 66, 88)',
   },
   font: {
     title: 'sans-serif',
   },
-  scale: {
-
-  }
+  scale: {},
 };
 
 const Theme = ({ children }) => (
