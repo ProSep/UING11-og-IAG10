@@ -16,6 +16,7 @@ const Div = styled.div`
   align-items: center;
   height: auto;
   margin: 30px 10px 50px 50px;
+  background-color: burlywood;
 `
 return (
   <Div>
