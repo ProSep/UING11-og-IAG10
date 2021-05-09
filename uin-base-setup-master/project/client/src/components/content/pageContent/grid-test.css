@@ -1,0 +1,10 @@
+.grid-test-columns {
+    display: grid;
+    background-color: red;
+    height: 45vh;
+    width: 88vw;
+    margin: auto;
+    border: 10px solid hotpink;
+    
+    text-align: center;
+}
