@@ -160,7 +160,7 @@ const FakeButton = styled.button`
     font-size: 16px;
     height: 4.8rem;
     width: 20rem;
-    margin-left: 6.25rem;
+    margin-left: 5.5rem;
     margin-top: 3rem;
     padding: 1rem;
     text-transform: uppercase;
