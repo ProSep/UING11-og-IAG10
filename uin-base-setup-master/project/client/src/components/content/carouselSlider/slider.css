@@ -45,10 +45,10 @@
 }
 
 button {
-    background-color: red;
+    background-color: rgb(247, 66, 88);
     color: white;
 }
 button:hover {
-    background-color: rgb(54, 9, 9);
-    color: red
+    background-color: red;
+    color: white
 }

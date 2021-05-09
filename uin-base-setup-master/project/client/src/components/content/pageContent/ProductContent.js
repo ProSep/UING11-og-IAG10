@@ -39,7 +39,7 @@ const BestillBoks = styled.section`
     width: 350px;
     border-radius: 15px;
     padding: 5%;
-    margin-top: 2rem;
+    margin-top: 5.12rem;
     `;
 
 const VolumBoks = styled.section`
@@ -104,7 +104,7 @@ const MainBox2 = styled.div`
 const MainBox3 = styled.div`
     grid-column: 1 / 3;
     grid-row: 2;
-    margin-top: 5rem;
+    margin-top: 12.5rem;
     font-size: 2rem;
     font-weight: 450;
     line-height: 3rem;
@@ -117,11 +117,13 @@ const MainBox4 = styled.div`
     grid-row: 2;
     display: block;
     align-items: center;
+    text-align: center;
     height: 5rem;
     overflow: hidden;
     width: 60rem;
     position: relative;
-    background-color: #F9F9F9;
+    margin-top: 3.5rem;
+    background-color: ${({ theme }) => theme.colors.brownish};
     `;
 
 const PrisTittel = styled.h2`
@@ -152,6 +154,30 @@ const NettbestillingBoks = styled.h2`
     margin-bottom: 1.5rem;
 `;
 
+const FakeButton = styled.button`
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    height: 4.8rem;
+    width: 20rem;
+    margin-left: 6.25rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    transition: ease .3s;
+    background: ${({ theme }) => theme.colors.red };
+`;
+    
+    const DetaljeFooter = styled.p`
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    `;
+
+
+
 const Product = ({ whatContent }) => {
     const { status, data } = SingleItemFetch(whatContent);
 
@@ -181,12 +207,12 @@ const Product = ({ whatContent }) => {
                             <InfoBox>
                                 <InfoListe>Sjangere: {data?.sjanger}</InfoListe>
                                 <InfoListe>Kategori: {data?.kategori}</InfoListe>
-                                <InfoListe>Forfatter: {data?.forfatter}</InfoListe>
                             </InfoBox>
 
                             <BestillBoks> 
                                 <NettbestillingBoks>NETTBESTILLING</NettbestillingBoks>
                                 <p>Få varen levert rett hjem!</p>
+                                <FakeButton>legg i kurv</FakeButton>
                             </BestillBoks>
                         </SectionBox3>
 
@@ -210,9 +236,10 @@ const Product = ({ whatContent }) => {
                 </MainBox1>
 
                 <MainBox4>
-                    <footer>
-                        Her er en kul footer
-                    </footer>
+                        <DetaljeFooter>Beskrivelse</DetaljeFooter>
+                        <DetaljeFooter>Detaljer</DetaljeFooter>
+                        <DetaljeFooter>Omtaler</DetaljeFooter>
+                        <DetaljeFooter>Goodreads</DetaljeFooter>
                 </MainBox4>
                 
                 <MainBox3>
