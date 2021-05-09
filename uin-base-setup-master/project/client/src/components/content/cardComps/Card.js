@@ -19,6 +19,10 @@ const Card = (props) => {
           </p>
           <p className="price">{price}</p>
         </div>
+        <div className="cardImages">
+          <h2>{title}</h2>
+          <p>Card images</p>
+        </div>
         <div className="cart" />
         <div>
           <FontAwesomeIcon icon={faShoppingCart} size="4x" />
