@@ -194,7 +194,7 @@ const Product = ({ whatContent }) => {
                             <VolumBoks>
                                 
                                     <KlikkOgVelg>KLIKK &amp; VELG</KlikkOgVelg>
-                                    <p>Hvilket volum leter du etter?</p>
+                                    <p>Hvilken leter du etter?</p>
                                     <p></p>
                                  
                             </VolumBoks>
