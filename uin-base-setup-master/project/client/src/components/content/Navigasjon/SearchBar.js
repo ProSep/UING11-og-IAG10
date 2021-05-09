@@ -4,27 +4,31 @@ import styled from "styled-components";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 
 const SearchBarStyle = styled.input`
-  background-color: white;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.light};
+  color:  ${({ theme }) => theme.colors.dark};
   font-size: 16px;
   border: none;
   outline: none;
   display: inline-block;
   width: 100%;
+  grid-column: 2;
 `;
 
 const Button = styled.button`
-  background: white;
-  color: black;
+  background: ${({ theme }) => theme.colors.light};
+  color:  ${({ theme }) => theme.colors.dark};
   border: none;
   display: inline-block;
-  align-self: flex-end;
+  transition-duration: 0.1s;
+  :hover {
+    color:  ${({ theme }) => theme.colors.brownish};
+  }
 `
 
 const SearchAndButton = styled.form`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.light};
   border: 2px solid black;
-  width: 20%;
+  width: 600px;
   padding: 8px;
   align-items: center;
   display: flex;

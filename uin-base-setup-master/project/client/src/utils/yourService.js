@@ -18,6 +18,12 @@ kategori,
 'slug': slug.current,
 `;
 
+
+const SjangerInfo = `
+title,
+'slug':slug.current
+`
+
 //Single kategori for kategori page
 export const getKategori = async (slug) => {
   const data = await client.fetch(`*[_type == "kategori" && slug.current == $slug]{${kategoriInfo}}`, { slug });
@@ -46,6 +52,12 @@ export const getSearch = async (search) => {
   console.log(search);
   return data;
 };
+
+export const getSjangers = async (slug) => {
+  const data = await client.fetch(`*[_type== "sjanger"] | order(tittel){${productInfo}}[0...20]`, { slug });
+  return data;
+};
+
 
 //Products under kategori
 // export const getProducts = async (slug) => {

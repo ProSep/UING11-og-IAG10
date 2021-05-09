@@ -16,6 +16,14 @@ export const ProductsArea = styled.section`
   height: auto;
 `;
 
+export const ProductsAreaList = styled.section`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  align-items: center;
+  height: auto;
+`;
+
 export const NavButton = styled.li`
   font-family: ${({ theme }) => theme.font.title};
   font-size: 2.2rem;
