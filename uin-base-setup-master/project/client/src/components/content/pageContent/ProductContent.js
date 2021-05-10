@@ -10,6 +10,12 @@ const Grid2 = styled.div`
     grid-template-columns: repeat(6, 1fr);
     width: 84.5vw;
     height: 50vh;
+
+    @media (${({ theme }) => theme.scale.medium }) {
+        max-width: 980px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
     `;
 
 const SectionBox1 = styled.div`
@@ -22,12 +28,24 @@ const SectionBox3 = styled.div`
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row: 2;
+    
+    @media (${({ theme }) => theme.scale.medium }) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
+    }
     `;
 
 const SectionBox4 = styled.div`
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row: 2;
+
+    @media (${({ theme }) => theme.scale.medium }) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+    }
     `;
 
 const BestillBoks = styled.section`
@@ -52,6 +70,10 @@ const VolumBoks = styled.section`
     border-radius: 15px;
     padding: 5%;
     margin-top: 29.65rem;
+   
+    @media (${({ theme }) => theme.scale.medium }) {
+        margin-top: 0.5rem;
+    }
     `;
 
 const Title = styled.h1`
@@ -82,6 +104,12 @@ const Grid = styled.div`
     grid-template-columns: repeat(6, 1fr);
     width: 100vw;
     height: 70vh;
+
+    @media (${({ theme }) => theme.scale.medium }) {
+        max-width: 980px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
     `;
 
 // Top Left Grid
@@ -90,6 +118,12 @@ const MainBox1 = styled.div`
     grid-column-end: 1;
     grid-row: 1;
     margin-top: 5rem;
+    
+    @media (${({ theme }) => theme.scale.medium }) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1;
+    }
     `;
 
 // Top Right Grid
@@ -98,6 +132,12 @@ const MainBox2 = styled.div`
     grid-column-end: 4;
     grid-row: 1;
     margin-left: 12rem;
+
+    @media (${({ theme }) => theme.scale.medium }) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 2;
+    }
     `;
 
 // Bottom Left Grid
@@ -108,6 +148,12 @@ const MainBox3 = styled.div`
     font-size: 2rem;
     font-weight: 450;
     line-height: 3rem;
+
+    @media (${({ theme }) => theme.scale.medium }) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 3;
+    }
     `;
 
 // Bottom Right Grid
@@ -124,6 +170,20 @@ const MainBox4 = styled.div`
     position: relative;
     margin-top: 3.5rem;
     background-color: ${({ theme }) => theme.colors.brownish};
+
+    @media (${({ theme }) => theme.scale.medium }) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 3;
+    margin-top: 7.5rem;
+    align-items: center;
+    display: flex;    
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: fit-content;
+    }
     `;
 
 const PrisTittel = styled.h2`
@@ -179,6 +239,10 @@ const FakeButton = styled.button`
     margin-top: 1.5rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+    @media (${({ theme }) => theme.scale.medium }) {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
     `;
 
 
