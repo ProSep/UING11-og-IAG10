@@ -13,7 +13,9 @@ const theme = {
   font: {
     title: 'sans-serif',
   },
-  scale: {},
+  scale: {
+    medium: "min-width: 1500px",
+  },
 };
 
 const Theme = ({ children }) => (
