@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Register from "./content/Login/Register";
 
 
 const FooterArea = styled.footer`

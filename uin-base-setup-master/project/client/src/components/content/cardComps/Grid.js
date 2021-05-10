@@ -14,7 +14,6 @@ const Gridstyling = styled.section`
   padding: 10px;
   justify-items: center;
   border-top: 1px solid;
-  border-bottom: 1px solid;
 `
 
 const NavImgs = styled.img`

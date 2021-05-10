@@ -9,6 +9,7 @@ import OutlandLogo from "../../../imgs/logo-outland.jpeg"
 
 const Ul = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.dark};

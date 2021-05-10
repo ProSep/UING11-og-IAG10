@@ -1,15 +1,15 @@
 import styled from 'styled-components/macro';
 import Category from '../components/content/pageContent/categoryContent';
 import Products from '../components/content/Products/Products';
+import Sidebar from '../components/Sidebar.js/Sidebar';
 import { Container } from '../styles/Styles';
 import { getKategori, getProducts } from '../utils/yourService';
 
 const Placment = styled.section`
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 2fr 6fr;
-`
-const Sidebar = styled.section`
-  grid-column: 1;
+  grid-column-gap: 50px;
 `
 
 const Mainpart = styled.section`
@@ -19,9 +19,7 @@ const Mainpart = styled.section`
 const CategoryPage = () => (
   <Container>
     <Placment>
-      <Sidebar>
-        <p>Hello</p>
-      </Sidebar>
+      <Sidebar/>
       <Mainpart>
         <Category whatContent={getKategori} />
         <Products whatProducts={getProducts}/>
