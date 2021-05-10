@@ -1,17 +1,32 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
-/* These are the styling components for Pages */
-
-// This will affect the elements in the specific pages in Pages-folder
+// Keps the sides empty
 export const Container = styled.section`
-  background-color: #000;
-  border: 3px solid #ed8b00;
-  height: 65px;
-  padding-right: 66rem;
-  padding-left: 66rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin: 20px;
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  @media (${({ theme }) => theme.scale.medium}) {
+    width: 1400px;
+  }
+`;
+
+export const NavButton = styled.li`
+  font-family: ${({ theme }) => theme.font.title};
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.light};
+  & a {
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: ${({ theme }) => theme.colors.dark};
+      background-color: ${({ theme }) => theme.colors.light};
+    }
+    &.active {
+      text-decoration: underline;
+    }
+  }
 `;
 
 // Styling for the content (which can also be used for all the pages)
@@ -52,20 +67,57 @@ export const StyleDeluxe6 = styled.article`
   margin: 10px;
 `;
 
-export const StyledFooter = styled.article`
-  padding: 44px;
+
+//Product styles
+
+export const ProductH2 = styled.h2`
+  font-size: 2rem;
   text-align: center;
-  background-color: #000;
-  color: white;
-`;
+  color: ${({ theme }) => theme.colors.dark};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+`
 
-export const StyleHorizontalLine = styled.article`
-  margin-left: 111px;
-`;
+export const ForfatterP = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark};
+  margin: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid;
+`
+export const SjangerP = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark};
+  margin: 1rem;
+`
+export const PrisTextP = styled.p`
+  font-size: 1.3rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark};
+  margin: 3rem 0 1rem 0;
+  font-weight: bold;
+`
 
-/* export const StyledNav = styled.nav`
-  width: 154rem;
+export const PrisP = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark};
+  margin: 1rem;
+  font-weight: bold;
+`
+export const ProductsArea = styled.section`
+  display: grid;
+  grid-template-columns: ${(p) => p.grid};
+  grid-gap: 20px;
+  padding: 2rem 1rem 4rem 1rem;
+  margin: 0 auto 0 auto;
+  @media (${({ theme }) => theme.scale.medium}) {
+    width: 1400px;
+  }
 `;
-*/
-
-// <img src={horizonLine} />

@@ -1,7 +1,6 @@
 import React from 'react';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './productcards.css';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const Card = (props) => {
   const newClassName = `color_bg ${props.alt}`;
@@ -25,7 +24,7 @@ const Card = (props) => {
         </div>
         <div className="cart" />
         <div>
-          <FontAwesomeIcon icon={faShoppingCart} size="4x" />
+          <ShoppingCartOutlinedIcon/>
         </div>
       </div>
     </div>
@@ -33,7 +32,3 @@ const Card = (props) => {
 };
 
 export default Card;
-
-/* <div>
-<FontAwesomeIcon icon={fa} />
-</div> */

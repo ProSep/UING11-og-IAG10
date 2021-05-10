@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 import Category from '../components/content/pageContent/categoryContent';
 import Products from '../components/content/Products/Products';
 import { Container } from '../styles/Styles';
-import { getKategori } from '../utils/yourService';
+import { getKategori, getProducts } from '../utils/yourService';
 
 const Placment = styled.section`
   display: grid;
@@ -24,7 +24,7 @@ const CategoryPage = () => (
       </Sidebar>
       <Mainpart>
         <Category whatContent={getKategori} />
-        <Products />
+        <Products whatProducts={getProducts}/>
       </Mainpart>
     </Placment>
   </Container>

@@ -7,6 +7,7 @@ import Navbar from "../components/content/Navigasjon/Navbar";
 import SearchPage from "../pages/SearchPage";
 import { SearchContext } from "../utils/SearchContext";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 const Routes = () => {
   const [searchp, setSearchp] = useState(null);
@@ -33,6 +34,7 @@ const Routes = () => {
           </SearchContext.Provider>
         </Switch>
       </DefaultLayout>
+      <Footer/>
     </Router>
   );
 };

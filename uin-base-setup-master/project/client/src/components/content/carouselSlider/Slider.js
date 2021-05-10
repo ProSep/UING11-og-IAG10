@@ -1,17 +1,64 @@
 import React, { useState } from 'react';
-import './slider.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowAltCircleLeft,
-  faArrowAltCircleRight,
-} from '@fortawesome/free-solid-svg-icons';
+import ArrowLeftOutlinedIcon from '@material-ui/icons/ArrowLeftOutlined';
+import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
 import ImgComps from './ImgComps';
 import img1 from './img/xsakura-banner1.jpg';
 import img2 from './img/xgamle-gubber-2-banner2-outland.jpg';
 import img3 from './img/ramune-banner1-outland.png';
 import img4 from './img/xvalhall-samleboks-banner1.jpg';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import styled from 'styled-components';
+
+const SliderStyle = styled.div`
+  margin: auto;
+  width: 100%;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  overflow: hidden;
+  position: relative;
+  background: none;
+`
+
+ const Slide = styled.div`
+  min-width: 100%;
+  height: 80%;
+  position: relative;
+  transition: 0.9s;
+  overflow: hidden;
+`
+
+const ArrowButtonsLeft = styled.button`
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  left: 0;
+  font-size: 50px;
+  transition-duration: 0.1s;
+  :hover {
+    font-size: 100px;
+  }
+`
+
+const ArrowButtonRight = styled.button`
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  right: 0;
+  font-size: 50px;
+  transition-duration: 0.1s;
+  :hover {
+    font-size: 100px;
+  }
+`
 
 const Slider = () => {
   const sliderArr = [
@@ -27,26 +74,23 @@ const Slider = () => {
   const goRight = () => {
     x === -100 * (sliderArr.length - 1) ? setX(0) : setX(x - 100);
   };
-
   return (
-    <div className="slider">
+    <SliderStyle>
       {sliderArr.map((item, index) => (
-        <div
+        <Slide
           key={index}
-          className="slide"
-          style={{ transform: `translateX(${x}%)` }}
-        >
+          style={{ transform: `translateX(${x}%)` }}>
           {item}
-        </div>
+        </Slide>
       ))}
 
-      <button id="goLeft" onClick={goLeft}>
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} size="4x" />
-      </button>
-      <button id="goRight" onClick={goRight}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} size="4x" />
-      </button>
-    </div>
+      <ArrowButtonsLeft onClick={goLeft}>
+        <ArrowLeftOutlinedIcon fontSize="inherit"/>
+      </ArrowButtonsLeft>
+      <ArrowButtonRight onClick={goRight}>
+        <ArrowRightOutlinedIcon fontSize="inherit"/>
+      </ArrowButtonRight>
+    </SliderStyle>
   );
 };
 

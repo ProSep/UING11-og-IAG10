@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
-import Register from "../Login/Register";
 import Kategorier from "./Kategorier";
 import NavElements from "./NavElements";
 import { Container } from "../../../styles/Styles";
@@ -75,7 +74,6 @@ if (status === 'loading') return <p>Loading...</p>;
                 <Kategorier key={navitem.slug} {...navitem} />
               ))
             : null}
-          <Register />
         </Ul>
       </nav>
     </header>

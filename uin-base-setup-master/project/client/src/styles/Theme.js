@@ -1,4 +1,3 @@
-import { ClientError } from '@sanity/client';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 

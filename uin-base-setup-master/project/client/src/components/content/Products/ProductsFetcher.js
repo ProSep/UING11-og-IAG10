@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProducts } from '../../../utils/yourService';
 
-const ProductsFetcher = () => {
+const ProductsFetcher = (whatProducts) => {
 
   const { slug } = useParams();
   const [produkts, setProdukts] = useState(null);
@@ -12,7 +11,7 @@ const ProductsFetcher = () => {
     const proData = async () => {
       setStatus('loading');
       try {
-        const content = await getProducts(slug);
+        const content = await whatProducts(slug);
         setProdukts(content);
         setStatus('initial');
       } catch (error) {
@@ -23,9 +22,12 @@ const ProductsFetcher = () => {
     };
     proData();
   }, [slug]);
-  console.log(produkts);
+
+  if (status === 'loading') return <p>Loading...</p>;
+  if (status === 'error') return <p>Noe gikk galt når data ble hentet. {produkts?.message}</p>;
 
   return { status }, produkts;
 };
+
 
 export default ProductsFetcher;
