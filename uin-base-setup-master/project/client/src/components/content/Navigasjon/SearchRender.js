@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ProductsArea } from '../../../styles/Styles';
 import { SearchContext } from '../../../utils/SearchContext';
-import ProductsLayout from '../Products/ProductsLayout';
+import ProductsLayout from '../Products/ProductsLayoutGrid';
 
 
 const SearchRender = () => {

@@ -57,6 +57,7 @@ const SearchBar = ({ onSubmit }) => {
             value={search}
             placeholder="Search..."
             id="search"
+            required
           />
           <Button type='submit'onClick={() => { history.push(`/search/results/${search}`) }}><SearchOutlinedIcon fontSize="large"/></Button>
         </SearchAndButton>

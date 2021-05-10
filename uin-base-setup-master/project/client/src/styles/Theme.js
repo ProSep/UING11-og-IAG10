@@ -1,4 +1,3 @@
-import { ClientError } from '@sanity/client';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 
@@ -14,7 +13,7 @@ const theme = {
     title: 'sans-serif',
   },
   scale: {
-    medium: 'max-width:1000px',
+    medium: "min-width: 1500px",
   },
 };
 

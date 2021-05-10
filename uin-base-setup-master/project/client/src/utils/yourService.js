@@ -58,6 +58,10 @@ export const getSjangers = async (slug) => {
   return data;
 };
 
+export const getHome = async () => {
+  const data = await client.fetch(`*[_type== "produkt"] | order(tittel){${productInfo}}[0...4]`);
+  return data;
+};
 
 //Products under kategori
 // export const getProducts = async (slug) => {
