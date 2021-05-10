@@ -22,11 +22,10 @@ const ProductsFetcher = () => {
       }
     };
     proData();
-  }, [ slug ]);
+  }, [slug]);
   console.log(produkts);
-  
-  
-  return ({status}, produkts);
-}
+
+  return { status }, produkts;
+};
 
 export default ProductsFetcher;

@@ -1,19 +1,16 @@
-import styled from "styled-components";
-
-const FooterContainter = styled.section`
-  background: ${({ theme }) => theme.colors.background};
-  margin-top: 200px;
-`
+import { StyledFooter } from '../styles/Styles';
 
 const Footer = () => (
-  <FooterContainter>
+  <StyledFooter>
     <div className="footer-container">
       <div className="content-wrap">
         <p>THIS IS A FOOTER STILL IN UNDER CONSTRUCTION!</p>
-        <p>skgnsdkdsgsgn</p>
+        <p>Empty Space: A New Hope for Space</p>
+        <p>Empty Space: The Deep Space Strikes Back</p>
+        <p>Empty Space: The Rise of the Spacebar</p>
       </div>
     </div>
-  </FooterContainter>
+  </StyledFooter>
 );
 
 export default Footer;
