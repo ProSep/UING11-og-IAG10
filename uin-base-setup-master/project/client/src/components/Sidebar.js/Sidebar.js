@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { useState } from "react";
 import SidebarLayout from "./SidebarLayout";
 import SidebarData from "./SidebarData";
+import { Sidebutton, SideText, SideLabel, Checkbox, MainText } from "../../styles/Styles";
 
 
 const Sidenav = styled.div`
@@ -20,6 +20,14 @@ const Sidebar = () => {
 return (
   <>
     <Sidenav>
+    <Sidebutton>
+      <SideText>
+          <MainText>På lager</MainText>
+      </SideText>
+    <SideLabel>
+      <Checkbox type="checkbox" onClick="Checked"/>
+    </SideLabel>
+    </Sidebutton>
       {SidebarData.map((item, index) => {
         return <SidebarLayout item={item} key={index} />;
       })}
