@@ -11,7 +11,7 @@ const SingleItemFetch = ( whatContent ) => {
     const fetchData = async () => {
       setStatus('loading');
       try {
-        const content = await whatContent(slug || '');
+        const content = await whatContent(slug);
         setData(content);
         setStatus('initial');
         console.log(data);

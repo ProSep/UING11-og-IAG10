@@ -81,7 +81,7 @@ const Grid = styled.div`
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(6, 1fr);
   width: 100vw;
-  height: 70vh;
+  height: auto;
 `;
 
 // Top Left Grid
@@ -202,8 +202,6 @@ const DetaljeFooter = styled.p`
 
 const Product = ({ whatContent }) => {
   const { status, data } = SingleItemFetch(whatContent);
-
-  console.log(data);
 
   if (status === "loading") return <p>Loading...</p>;
   if (status === "error")
