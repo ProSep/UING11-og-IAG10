@@ -49,7 +49,7 @@ const SubmenuText = styled.h3`
   font-size: 20px;
   font-weight: 100;
   grid-column: 1;
-  color: ${({ theme }) => theme.colors.dark}
+  color: ${({ theme }) => theme.colors.dark};
 `
 
 const Label = styled.label`
