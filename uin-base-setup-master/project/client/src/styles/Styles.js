@@ -121,3 +121,15 @@ export const ProductsArea = styled.section`
     width: 1400px;
   }
 `;
+
+//For searchpage and categorypages
+export const Placment = styled.section`
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-column-gap: 50px;
+`
+
+export const Mainpart = styled.section`
+  grid-column: 2;
+`

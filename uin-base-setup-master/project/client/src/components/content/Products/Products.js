@@ -44,7 +44,7 @@ const [view, setView] = useState("grid");
         <>
           <Viewbuttons onClick={() => setView("list")}><ListIcon fontSize="large"/></Viewbuttons>
           <Viewbuttons onClick={() => setView("grid")}><GridOnIcon fontSize="large"/></Viewbuttons>
-        <ProductsArea grid="repeat(1, 1fr)">
+        <ProductsArea view="repeat(1, 1fr)">
             {produkts?.length > 0 ? produkts.map((produkts) => <ProductsLayoutList key={produkts.slug} {...produkts} />)
             : null}
         </ProductsArea>
