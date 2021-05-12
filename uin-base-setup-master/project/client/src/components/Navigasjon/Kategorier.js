@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { NavButton } from '../../../styles/Styles';
+import { NavButton } from '../../styles/Styles';
 
 const Kategorier = ({ kategori, slug }) => (
   <NavButton key={slug}>

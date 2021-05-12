@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from '../components/HomeSlider/Slider';
-import horizonLine from '../components/carouselSlider/img/outland-horizontal-line-edit2size.png';
+import horizonLine from '../images/HomeImgs/outland-horizontal-line-edit2size.png';
 import GridLayout from '../components/cardComps/Grid';
 import styled from 'styled-components';
 import { getHome } from '../utils/SanityFercher';

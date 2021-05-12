@@ -5,7 +5,7 @@ import NavElements from "./NavElements";
 import SearchFetch from "./SearchFetch";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
-import OutlandLogo from "../../../imgs/logo-outland.jpeg"
+import OutlandLogo from '../../images/logo-outland.jpeg';
 
 const Ul = styled.ul`
   display: flex;

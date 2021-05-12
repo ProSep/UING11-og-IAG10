@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { SearchContext } from "../../../utils/SearchContext";
-import { getSearch } from "../../../utils/SanityFercher";
+import { SearchContext } from "../../utils/SearchContext";
+import { getSearch } from "../../utils/SanityFercher";
 import SearchBar from "./SearchBar";
 import SearchRender from "./SearchRender";
 

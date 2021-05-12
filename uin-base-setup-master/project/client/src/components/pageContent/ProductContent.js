@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { urlFor } from "../../../utils/imageHandler";
+import { urlFor } from "../../utils/imageHandler";
 import SingleItemFetch from "../singelItemFetch";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 

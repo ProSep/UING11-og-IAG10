@@ -1,4 +1,4 @@
-import { ProductsArea } from '../../../styles/Styles';
+import { ProductsArea } from '../../styles/Styles';
 import ProductsFetcher from './ProductsFetcher';
 import ListIcon from '@material-ui/icons/List';
 import GridOnIcon from '@material-ui/icons/GridOn';

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getKategoris } from '../../../utils/SanityFercher';
+import { getKategoris } from '../../utils/SanityFercher';
 
 const NavElements = () => {
 

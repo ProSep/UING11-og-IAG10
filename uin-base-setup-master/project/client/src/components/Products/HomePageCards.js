@@ -1,4 +1,4 @@
-import { ProductsArea } from "../../../styles/Styles";
+import { ProductsArea } from "../../styles/Styles";
 import ProductsFetcher from "./ProductsFetcher";
 import styled from "styled-components";
 import ProductsLayoutGrid from "./ProductsLayoutGrid";

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ForfatterP, PrisP, PrisTextP, ProductH2, SjangerP } from "../../../styles/Styles";
-import { urlFor } from "../../../utils/imageHandler";
+import { ForfatterP, PrisP, PrisTextP, ProductH2, SjangerP } from "../../styles/Styles";
+import { urlFor } from "../../utils/imageHandler";
 
 const ProductBox = styled(Link)`
   display: block;
