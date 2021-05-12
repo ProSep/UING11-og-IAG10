@@ -26,7 +26,7 @@ const produkt = {
       name: 'bilde',
       type: 'image',
       options: {
-        hotspot: true // <-- Defaults to false
+        hotspot: true
       },
       fields: [
         {
@@ -34,11 +34,11 @@ const produkt = {
           type: 'string',
           title: 'beskrivelse',
           options: {
-            isHighlighted: true // <-- make this field easily accessible
+            isHighlighted: true 
           }
         },
         {
-          // Editing this field will be hidden behind an "Edit"-button
+          
           name: 'attribution',
           type: 'string',
           title: 'Attribution',
