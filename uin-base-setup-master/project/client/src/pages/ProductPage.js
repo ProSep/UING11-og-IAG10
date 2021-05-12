@@ -1,12 +1,9 @@
 import Product from '../components/content/pageContent/ProductContent';
-import { getProduct } from '../utils/yourService';
-import { Container } from '../styles/Styles';
+import { getProduct } from '../utils/SanityFercher';
 
 const ProductPage = () => (
   <>
-    <Container>
       <Product whatContent={getProduct} />
-    </Container>
   </>
 );
 

@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
 import Kategorier from "./Kategorier";
 import NavElements from "./NavElements";
-import { Container } from "../../../styles/Styles";
 import SearchFetch from "./SearchFetch";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
@@ -61,6 +60,16 @@ const Login = styled.section`
   margin: 0 10px 0 0;
   font-weight: 600;
 `
+
+const Container = styled.section`
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  @media (${({ theme }) => theme.scale.medium}) {
+    width: 1400px;
+  }
+`;
+
 
 const Navbar = () => {
   const navitem = NavElements();

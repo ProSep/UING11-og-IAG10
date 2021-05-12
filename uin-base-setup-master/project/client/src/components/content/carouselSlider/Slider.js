@@ -83,7 +83,6 @@ const Slider = () => {
           {item}
         </Slide>
       ))}
-
       <ArrowButtonsLeft onClick={goLeft}>
         <ArrowLeftOutlinedIcon fontSize="inherit"/>
       </ArrowButtonsLeft>

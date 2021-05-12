@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { createRegister } from '../../../utils/registerService';
+import { createRegister } from '../../utils/SanitySender';
 
 const NewsInput = styled.input`
   background-color: ${({ theme }) => theme.colors.brownish};
@@ -77,7 +77,7 @@ const Register = () => {
           Gratulerer! Du er nå meldt på nyhetsbrevet med epost-adresse {email}
         </p>
       ) : null}
-      <NewsForm loading={loading} onSubmit={handleSubmit}>
+      <NewsForm onSubmit={handleSubmit}>
         <label id="email">
           <NewsInput
             onChange={handleChange}

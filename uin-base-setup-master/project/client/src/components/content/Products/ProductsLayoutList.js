@@ -44,23 +44,24 @@ const ProductsLayoutList = ({
   bilde,
   kslug,
   price,
-  sjangerer
+  sjangerer,
+  index
 }) => (
-    <ProductBox to={`/${kslug}/${slug}`} className={slug}>
-      <section>
-        {bilde ? (
-          <ProductImage
-            src={urlFor(bilde).width(240).height(340).format("webp").url()}
-            alt={bilde.beskrivelse}/>) : null}
-          </section>
-      <ProductInfo>
-        <ProductH2>{tittel}</ProductH2>
-        {sjangerer?.length > 0 ? sjangerer.map((sjangerer) => <SjangerP key={sjangerer.slug}>{sjangerer}</SjangerP>) : null}
-        <ForfatterP>{forfatter}</ForfatterP>
-        <PrisTextP>PRIS PÅ NETT</PrisTextP>
-        <PrisP>{price} KR</PrisP>
-      </ProductInfo>
-    </ProductBox>
+  <ProductBox to={`/${kslug}/${slug}`} className={slug} key={slug}>
+  <section key={index}>
+    {bilde ? (
+      <ProductImage
+        src={urlFor(bilde).width(240).height(340).format("webp").url()}
+        alt={bilde.beskrivelse} key={index}/>) : null}
+  </section>
+  <ProductInfo key={index}>
+    <ProductH2 key={index}>{tittel}</ProductH2>
+    {sjangerer?.length > 0 ? sjangerer.map((sjangerer, index) => <SjangerP key={index}>{sjangerer}</SjangerP>) : null}
+    <ForfatterP key={index}>{forfatter}</ForfatterP>
+    <PrisTextP key={index}>PRIS PÅ NETT</PrisTextP>
+    <PrisP key={index}>{price} KR</PrisP>
+  </ProductInfo>
+</ProductBox>
 );
 
 export default ProductsLayoutList;

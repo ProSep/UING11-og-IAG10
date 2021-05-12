@@ -1,14 +1,5 @@
 import styled from "styled-components/macro";
 
-// Keps the sides empty
-export const Container = styled.section`
-  padding: 0rem 1rem 0rem 1rem;
-  margin: 0 auto 0 auto;
-  padding: 10px;
-  @media (${({ theme }) => theme.scale.medium}) {
-    width: 1400px;
-  }
-`;
 
 export const NavButton = styled.li`
   font-family: ${({ theme }) => theme.font.title};

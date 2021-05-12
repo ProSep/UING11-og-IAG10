@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getKategoris } from '../../../utils/yourService';
+import { getKategoris } from '../../../utils/SanityFercher';
 
 const NavElements = () => {
 
@@ -20,9 +20,7 @@ const NavElements = () => {
       }
     };
     navData();
-  }, []);
-  console.log(navitem);
-  
+  }, []);  
   
   return { status }, navitem;
 }

@@ -25,7 +25,7 @@ return (
           <MainText>På lager</MainText>
       </SideText>
     <SideLabel>
-      <Checkbox type="checkbox" onClick="Checked"/>
+      <Checkbox type="checkbox"/>
     </SideLabel>
     </Sidebutton>
       {SidebarData.map((item, index) => {
