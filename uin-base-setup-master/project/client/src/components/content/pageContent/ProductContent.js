@@ -3,30 +3,34 @@ import { urlFor } from "../../../utils/imageHandler";
 import SingleItemFetch from "../singelItemFetch";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 
+// Main Grid
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 5fr 1fr 4fr;
+  width: auto;
+  height: auto;
+`;
+
 const Grid2 = styled.div`
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(6, 1fr);
-  width: 84.5vw;
-  height: 50vh;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 3;
+  width: auto;
+  height: auto;
 `;
 
 const SectionBox1 = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 3;
   grid-row: 1;
 `;
 
 const SectionBox3 = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 1;
   grid-row: 2;
 `;
 
 const SectionBox4 = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 2;
   grid-row: 2;
 `;
 
@@ -74,30 +78,14 @@ const Pris = styled.h2`
   line-height: 1.125;
 `;
 
-// Main Grid
-const Grid = styled.div`
-  display: grid;
-  grid-gap: 0.5em;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(6, 1fr);
-  width: 100vw;
-  height: auto;
-`;
+
 
 // Top Left Grid
 const MainBox1 = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column: 1;
   grid-row: 1;
-  margin-top: 5rem;
-`;
-
-// Top Right Grid
-const MainBox2 = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row: 1;
-  margin-left: 12rem;
+  
+  margin: auto auto auto auto;
 `;
 
 // Bottom Left Grid
@@ -210,7 +198,6 @@ const Product = ({ whatContent }) => {
   return (
     <>
       <Grid>
-        <MainBox2>
           <Grid2>
             <SectionBox1>
               <Title>{data?.tittel}</Title>
@@ -254,7 +241,6 @@ const Product = ({ whatContent }) => {
               </VolumBoks>
             </SectionBox4>
           </Grid2>
-        </MainBox2>
 
         <MainBox1>
           {data?.bilde ? (
