@@ -5,10 +5,12 @@ import NavElements from "./NavElements";
 import { Container } from "../../../styles/Styles";
 import SearchFetch from "./SearchFetch";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import OutlandLogo from "../../../imgs/logo-outland.jpeg"
 
 const Ul = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.dark};
@@ -21,15 +23,16 @@ const HeaderBox = styled.section`
   justify-content: center;
   padding: 30px 0 30px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
   justify-content: space-between;
 `;
 
 const HandleKurv = styled.h1`
   color:  ${({ theme }) => theme.colors.dark};
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
+  font-weight: 600;
 `
 const Logo = styled.img`
   display: inline-block;
@@ -37,10 +40,26 @@ const Logo = styled.img`
   height: 50px;
 `
 
-const Shoping = styled.section`
+const ShopingBox = styled.section`
+  grid-column: 4;
+  display: inline-block;
+  margin: auto 0 auto auto;
+  font-size: 26px;
+`
+
+const LoginBox = styled.section`
   grid-column: 3;
   display: inline-block;
-  margin-left: auto;
+  margin: auto 0 auto auto;
+  font-size: 26px;
+`
+
+const Login = styled.section`
+  color:  ${({ theme }) => theme.colors.dark};
+  font-size: 18px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  font-weight: 600;
 `
 
 const Navbar = () => {
@@ -61,10 +80,14 @@ if (status === 'loading') return <p>Loading...</p>;
             <Logo src={OutlandLogo}/>
           </NavLink>
           <SearchFetch />
-          <Shoping>
+          <LoginBox>
+          <Login>Login/Register</Login>
+            <AccountCircleOutlinedIcon fontSize="inherit"/>
+            </LoginBox>
+          <ShopingBox>
             <HandleKurv>Handle Kurv</HandleKurv>
-            <ShoppingCartOutlinedIcon fontSize="large"/>
-          </Shoping>
+            <ShoppingCartOutlinedIcon fontSize="inherit"/>
+          </ShopingBox>
         </HeaderBox>
       </Container>
       <nav>

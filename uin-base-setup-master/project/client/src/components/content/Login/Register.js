@@ -1,5 +1,42 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import { createRegister } from '../../../utils/registerService';
+
+const NewsInput = styled.input`
+  background-color: ${({ theme }) => theme.colors.brownish};
+  color:  ${({ theme }) => theme.colors.dark};
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 200px;
+  font-size: 18px;
+`;
+
+const NewsButton = styled.button`
+  background: ${({ theme }) => theme.colors.light};
+  color:  ${({ theme }) => theme.colors.dark};
+  border: 1px solid black;
+  display: inline-block;
+  transition-duration: 0.1s;
+  width: 100px;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 10px;
+  :hover {
+    color:  ${({ theme }) => theme.colors.light};
+    background-color:  ${({ theme }) => theme.colors.red};
+  }
+`
+
+const NewsForm = styled.form`
+  background-color: ${({ theme }) => theme.colors.light};
+  border: 2px solid black;
+  width: 320px;
+  padding: 14px;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+`
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -40,20 +77,19 @@ const Register = () => {
           Gratulerer! Du er nå meldt på nyhetsbrevet med epost-adresse {email}
         </p>
       ) : null}
-      <form loading={loading} onSubmit={handleSubmit}>
+      <NewsForm loading={loading} onSubmit={handleSubmit}>
         <label id="email">
-          E-post Adresse:
-          <input
+          <NewsInput
             onChange={handleChange}
             value={email}
             type="text"
             id="email"
-            placeholder="skriv inn epost-adresse"
+            placeholder="Skriv inn epost-adresse"
             required
           />
         </label>
-        <button type="submit">{loading ? 'Registrerer ...' : 'Meld på'}</button>
-      </form>
+        <NewsButton type="submit">{loading ? 'Registrerer ...' : 'Meld på'}</NewsButton>
+      </NewsForm>
     </>
   );
 };

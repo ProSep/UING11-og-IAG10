@@ -111,13 +111,59 @@ export const PrisP = styled.p`
   margin: 1rem;
   font-weight: bold;
 `
+
+
+//For searchpage and categorypages
+export const Placment = styled.section`
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-column-gap: 50px;
+`
+
+export const Mainpart = styled.section`
+  grid-column: 2;
+`
+
 export const ProductsArea = styled.section`
   display: grid;
   grid-template-columns: ${(p) => p.grid};
   grid-gap: 20px;
   padding: 2rem 1rem 4rem 1rem;
   margin: 0 auto 0 auto;
-  @media (${({ theme }) => theme.scale.medium}) {
-    width: 1400px;
-  }
 `;
+
+//Sidemenu
+export const Sidebutton = styled.button`
+  background-color: ${({ theme }) => theme.colors.light};
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  text-decoration: none;
+  border: none;
+  padding-top: 20px;
+  border-color: ${({ theme }) => theme.colors.grey};
+  border-bottom: 1px solid;
+  width: 100%;
+`;
+export const SideText = styled.div`
+  grid-column: 1;
+  margin: auto auto auto 0;
+`;
+
+export const MainText = styled.h2`
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+`
+
+export const SideLabel = styled.label`
+  grid-column: 2;
+  margin: auto 0 auto auto;
+`
+
+export const Checkbox = styled.input`
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+`

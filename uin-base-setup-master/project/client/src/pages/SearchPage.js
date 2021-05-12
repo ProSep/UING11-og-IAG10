@@ -1,14 +1,20 @@
-import SearchRender from '../components/content/Navigasjon/SearchRender';
-import Category from '../components/content/pageContent/categoryContent';
-import { Container } from '../styles/Styles';
-import { getKategori } from '../utils/yourService';
+import SearchRender from "../components/content/Navigasjon/SearchRender";
+import Category from "../components/content/pageContent/categoryContent";
+import Sidebar from '../components/Sidebar.js/Sidebar';
+import { Container, Placment, Mainpart } from '../styles/Styles';
+import { getKategori } from "../utils/yourService";
 
 
 const SearchPage = () => {
   return (
     <Container>
-      <Category whatContent={getKategori}/>
-      <SearchRender/>
+      <Placment>
+        <Sidebar />
+        <Mainpart>
+          <Category whatContent={getKategori} />
+          <SearchRender />
+        </Mainpart>
+      </Placment>
     </Container>
   );
 };

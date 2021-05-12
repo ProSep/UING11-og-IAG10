@@ -11,7 +11,6 @@ const SearchBarStyle = styled.input`
   outline: none;
   display: inline-block;
   width: 100%;
-  grid-column: 2;
 `;
 
 const Button = styled.button`
@@ -32,6 +31,7 @@ const SearchAndButton = styled.form`
   padding: 8px;
   align-items: center;
   display: flex;
+  grid-column: 2;
 `
 
 const SearchBar = ({ onSubmit }) => {
