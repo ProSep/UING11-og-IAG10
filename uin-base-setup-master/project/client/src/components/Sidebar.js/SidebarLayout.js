@@ -24,10 +24,13 @@ const SubmenuBox = styled.button`
 `;
 
 const SubmenuText = styled.h3`
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 100;
   grid-column: 1;
   color: ${({ theme }) => theme.colors.dark};
+  @media (${({ theme }) => theme.scale.medium}) {
+    font-size: 20px;
+  }
 `
 
 
