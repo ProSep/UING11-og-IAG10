@@ -30,6 +30,14 @@ const HeaderBox = styled.section`
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
   justify-content: space-between;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 `;
 
 const HandleKurv = styled.h1`
@@ -50,6 +58,11 @@ const ShopingBox = styled.section`
   display: inline-block;
   margin: auto 0 auto auto;
   font-size: 26px;
+
+  @media (${({ theme }) => theme.scale.xsmall}) {
+    margin-left: 0rem;
+    padding: 10px;
+}
 `
 
 const LoginBox = styled.section`
@@ -57,6 +70,11 @@ const LoginBox = styled.section`
   display: inline-block;
   margin: auto 0 auto auto;
   font-size: 26px;
+
+  @media (${({ theme }) => theme.scale.xsmall}) {
+    margin-left: 0rem;
+    padding: 10px;
+}
 `
 
 const Login = styled.section`

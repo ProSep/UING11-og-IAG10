@@ -15,6 +15,7 @@ const theme = {
   scale: {
     medium: 'min-width: 1500px',
     small: 'max-width: 1110px',
+    xsmall: 'max-width: 1015px',
   },
 };
 
