@@ -52,5 +52,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
-/* don't for get to create the Footer own separate */

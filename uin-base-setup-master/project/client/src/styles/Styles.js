@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
 
-
 export const NavButton = styled.li`
   font-family: ${({ theme }) => theme.font.title};
   font-size: 2.2rem;
@@ -111,7 +110,7 @@ export const PrisP = styled.p`
 export const Placment = styled.section`
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: auto 6fr;
   grid-column-gap: 50px;
 `
 
@@ -125,6 +124,9 @@ export const ProductsArea = styled.section`
   grid-gap: 20px;
   padding: 2rem 1rem 4rem 1rem;
   margin: 0 auto 0 auto;
+  @media (${({ theme }) => theme.scale.small}) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 //Sidemenu
@@ -145,9 +147,12 @@ export const SideText = styled.div`
 `;
 
 export const MainText = styled.h2`
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
+  @media (${({ theme }) => theme.scale.medium}) {
+    font-size: 28px;
+  }
 `
 
 export const SideLabel = styled.label`

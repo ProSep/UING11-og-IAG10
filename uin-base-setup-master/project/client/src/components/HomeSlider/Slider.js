@@ -11,13 +11,15 @@ import styled from 'styled-components';
 const SliderStyle = styled.div`
   margin: auto;
   width: 100%;
-  height: 50vh;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   align-content: center;
   overflow: hidden;
   position: relative;
   background: none;
+  margin-bottom: 50px;
+  border-bottom: 1px solid;
 `
 
  const Slide = styled.div`
@@ -30,7 +32,7 @@ const SliderStyle = styled.div`
 
 const ArrowButtonsLeft = styled.button`
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   height: 100%;
   background: none;
@@ -46,7 +48,7 @@ const ArrowButtonsLeft = styled.button`
 
 const ArrowButtonRight = styled.button`
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   height: 100%;
   background: none;

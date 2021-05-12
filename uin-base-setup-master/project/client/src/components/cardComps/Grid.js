@@ -13,7 +13,6 @@ const Gridstyling = styled.section`
   margin: auto;
   padding: 10px;
   justify-items: center;
-  border-top: 1px solid;
 `
 
 const NavImgs = styled.img`
