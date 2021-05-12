@@ -17,11 +17,6 @@ kategori,
 `;
 
 
-const SjangerInfo = `
-title,
-'slug':slug.current
-`
-
 //Single kategori for kategori page
 export const getKategori = async (slug) => {
   const data = await client.fetch(`*[_type == "kategori" && slug.current == $slug]{${kategoriInfo}}`, { slug });
@@ -48,11 +43,6 @@ export const getProducts = async (slug) => {
 export const getSearch = async (search) => {
   const data = await client.fetch(`*[_type== "produkt" && ([kategori->kategori, tittel, forfatter->forfatter] match ['${search}*', '${search}*', '${search}*'])] | order(tittel){${productInfo}}[0...20]`, { search });
   console.log(search);
-  return data;
-};
-
-export const getSjangers = async (slug) => {
-  const data = await client.fetch(`*[_type== "sjanger"] | order(tittel){${productInfo}}[0...20]`, { slug });
   return data;
 };
 

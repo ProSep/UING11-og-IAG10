@@ -166,3 +166,27 @@ export const Checkbox = styled.input`
   height: 18px;
   width: 18px;
 `
+
+//Grid and line buttons
+
+export const ButtonFlexBox = styled.section`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+`
+
+export const Viewbuttons = styled.button`
+  background: ${({ theme }) => theme.colors.light};
+  color:  ${({ theme }) => theme.colors.dark};
+  border: none;
+  border-radius: 3px;
+  align-content: center;
+  transition-duration: 0.1s;
+  margin: 0 5px 0 0;
+  font-size: 30px;
+  :hover {
+    background: ${({ theme }) => theme.colors.dark};
+    color:  ${({ theme }) => theme.colors.light};
+  }
+`
