@@ -1,4 +1,4 @@
-import SearchRender from "../components/content/Navigasjon/SearchRender";
+import SearchRender from "../components/Navigasjon/SearchRender";
 import Sidebar from '../components/Sidebar.js/Sidebar';
 import { Placment, Mainpart } from '../styles/Styles';
 

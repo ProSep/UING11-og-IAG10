@@ -1,9 +1,9 @@
-import ProductImg1 from '../ImagesForPages/bøker-rr-3708666983.png';
-import ProductImg2 from '../ImagesForPages/bøker-r-3708666983.png';
-import ProductImg3 from '../ImagesForPages/xmanga-r-3708666983.png.pagespeed.ic.00t-kKiF4d.png';
-import ProductImg4 from '../ImagesForPages/xspill-r-3708666983.png.pagespeed.ic.3BcyoSDPgb.png';
-import ProductImg5 from '../ImagesForPages/xlego-r-3708666983.png.pagespeed.ic.7zl8hsSMQK.png';
-import ProductImg6 from '../ImagesForPages/xeffekter-r-3708666983.png.pagespeed.ic.o64R7HlK4c.png';
+import ProductImg1 from '../../images/ImagesForPages/bøker-rr-3708666983.png';
+import ProductImg2 from '../../images/ImagesForPages/bøker-r-3708666983.png';
+import ProductImg3 from '../../images/ImagesForPages/xmanga-r-3708666983.png.pagespeed.ic.00t-kKiF4d.png';
+import ProductImg4 from '../../images/ImagesForPages/xspill-r-3708666983.png.pagespeed.ic.3BcyoSDPgb.png';
+import ProductImg5 from '../../images/ImagesForPages/xlego-r-3708666983.png.pagespeed.ic.7zl8hsSMQK.png';
+import ProductImg6 from '../../images/ImagesForPages/xeffekter-r-3708666983.png.pagespeed.ic.o64R7HlK4c.png';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 

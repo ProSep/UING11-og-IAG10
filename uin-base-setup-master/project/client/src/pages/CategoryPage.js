@@ -1,5 +1,5 @@
-import Category from '../components/content/pageContent/categoryContent';
-import Products from '../components/content/Products/Products';
+import Category from '../components/pageContent/categoryContent';
+import Products from '../components/Products/Products';
 import Sidebar from '../components/Sidebar.js/Sidebar';
 import { Placment, Mainpart } from '../styles/Styles';
 import { getKategori, getProducts } from '../utils/SanityFercher';

@@ -3,7 +3,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import Home from "../pages/Home";
 import ProductPage from "../pages/ProductPage";
 import CategoryPage from "../pages/CategoryPage";
-import Navbar from "../components/content/Navigasjon/Navbar";
+import Navbar from "../components/Navigasjon/Navbar";
 import SearchPage from "../pages/SearchPage";
 import { SearchContext } from "../utils/SearchContext";
 import { useState } from "react";
