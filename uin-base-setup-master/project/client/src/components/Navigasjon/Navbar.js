@@ -97,13 +97,6 @@ const Container = styled.section`
 
 const Navbar = () => {
   const navitem = NavElements();
-`
-
-if (status === 'loading') return <p>Loading...</p>;
-//   if (status === 'error') return <p>Noe gikk galt når data ble hentet. {navitem?.message}</p>;`;
-
-  console.log(navitem);
-
 
   return (
     <header>

@@ -46,7 +46,7 @@ const ProductsLayoutGrid = ({
   sjangerer,
   index
 }) => (
-    <ProductBox to={`/${kslug}/${slug}`} className={slug} key={slug}>
+    <ProductBox to={`/${kslug}/${slug}`} key={slug}>
       <section key={index}>
         {bilde ? (
           <ProductImage

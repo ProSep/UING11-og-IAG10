@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../../utils/SearchContext";
 import { getSearch } from "../../utils/SanityFercher";
 import SearchBar from "./SearchBar";
-import SearchRender from "./SearchRender";
 
 const SearchFetch = () => {
   const {searchp, setSearchp} = useContext(SearchContext);

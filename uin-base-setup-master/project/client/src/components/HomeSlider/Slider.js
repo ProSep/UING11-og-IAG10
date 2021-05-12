@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ArrowLeftOutlinedIcon from '@material-ui/icons/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
-import ImgComps from './ImgComps';
 import img1 from '../../images/HomeImgs/xsakura-banner1.jpg';
 import img2 from '../../images/HomeImgs/xgamle-gubber-2-banner2-outland.jpg';
 import img3 from '../../images/HomeImgs/ramune-banner1-outland.png';
@@ -61,6 +60,12 @@ const ArrowButtonRight = styled.button`
     font-size: 100px;
   }
 `
+
+const ImgComps = styled.img`
+    width: 100%;
+    height: auto;
+`
+
 
 const Slider = () => {
   const sliderArr = [
