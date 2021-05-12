@@ -18,6 +18,9 @@ export const NavButton = styled.li`
       text-decoration: underline;
     }
   }
+  @media (${({ theme }) => theme.scale.small}) {
+    padding: 1.5rem;
+  }
 `;
 
 // Styling for the content (which can also be used for all the pages)
