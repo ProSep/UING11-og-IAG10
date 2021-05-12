@@ -3,8 +3,8 @@ import { SearchContext } from '../../../utils/SearchContext';
 import ListIcon from '@material-ui/icons/List';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import styled from "styled-components";
-import ProductsLayoutList from '../Products/ProductsLayoutList';
-import ProductsLayoutGrid from '../Products/ProductsLayoutGrid';
+import ProductsLayoutList from '../../Products/ProductsLayoutList';
+import ProductsLayoutGrid from '../../Products/ProductsLayoutGrid';
 import { ProductsArea } from '../../../styles/Styles';
 
 

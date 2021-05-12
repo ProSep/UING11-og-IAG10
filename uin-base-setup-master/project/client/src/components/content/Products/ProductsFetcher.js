@@ -26,7 +26,7 @@ const ProductsFetcher = (whatProducts) => {
   if (status === 'loading') return <p>Loading...</p>;
   if (status === 'error') return <p>Noe gikk galt når data ble hentet. {produkts?.message}</p>;
 
-  return { status }, produkts;
+  return produkts;
 };
 
 

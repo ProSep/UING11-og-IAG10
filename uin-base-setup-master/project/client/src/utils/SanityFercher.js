@@ -1,5 +1,3 @@
-// Dette er en demo for måter å hente data på.
-// Du må huske å erstatte ADD_YOUR_TYPE_HERE med egne dokumenttyper fra Sanity
 import client from './client';
 
 const productInfo = `
@@ -62,49 +60,3 @@ export const getHome = async () => {
   const data = await client.fetch(`*[_type== "produkt"] | order(tittel){${productInfo}}[0...4]`);
   return data;
 };
-
-//Products under kategori
-// export const getProducts = async (slug) => {
-//   const data = await client.fetch(`*[_type== "produkt" && kategori -> slug.current == $slug && slug.current in ["one-punch-banana-duck-vol-3-what-the-quack-is-that", "one-punch-banana-duck"]] | order(tittel){${productInfo}}[0...20]`, { slug });
-//   return data;
-// };
-
-//Products search
-
-// export const getSearch= async (slug) => {
-//   const query = `*[_type== "produkt" && (kategori->kategori match "manga)]{${slug}}`;
-//   const data = await client.fetch(query);
-//   //const data = await client.fetch(`*[tittel match "one"]{${productInfo}}[0...20]`, ${slug});
-//   console.log(slug);
-//   return data;
-// };
-
-
-
-
-// const fields = `
-//   add_your_fields_here
-// `
-
-// const otherFields = `
-//   add_your_fields_here
-// `
-
-// const anotherFields = `
-//   add_your_fields_here
-// `
-
-// export const firstService = async () => {
-//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${fields}}`);
-//   return data;
-// };
-
-// export const secondService = async () => {
-//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${otherFields}}`);
-//   return data;
-// };
-
-// export const firstServiceWithParam = async (slug) => {
-//   const data = await client.fetch(`*[_type == "ADD_YOUR_TYPE_HERE"]{${anotherFields}}`, { slug });
-//   return data?.[0];
-// };

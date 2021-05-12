@@ -14,11 +14,9 @@ const SingleItemFetch = ( whatContent ) => {
         const content = await whatContent(slug);
         setData(content);
         setStatus('initial');
-        console.log(data);
       } catch (error) {
         setStatus('error');
         setData(error);
-        console.log(error);
       }
     };
     fetchData();

@@ -36,7 +36,7 @@ const SearchAndButton = styled.form`
 
 const SearchBar = ({ onSubmit }) => {
 
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const handleChange = (event) => {
     setSearch(event.target.value);
   };

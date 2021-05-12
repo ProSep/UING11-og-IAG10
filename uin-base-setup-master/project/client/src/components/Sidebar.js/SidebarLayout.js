@@ -52,10 +52,10 @@ const SidebarLayout = ({ item }) => {
       </Sidebutton>
       {submenu &&
         item.subMenu.map((item, index) => {
-          return (<SubmenuBox>
+          return (<SubmenuBox key={index}>
           <SubmenuText>{item.title}</SubmenuText>
           <SideLabel>
-          <Checkbox type="checkbox" onClick="Checked"/>
+          <Checkbox type="checkbox"/>
           </SideLabel>
           </SubmenuBox>);
         })}

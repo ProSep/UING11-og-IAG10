@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 
-// Her må du legge til egne verdier
 const theme = {
   colors: {
     dark: 'rgb(32,28,28)',

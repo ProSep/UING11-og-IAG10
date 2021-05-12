@@ -1,11 +1,10 @@
 import Category from '../components/content/pageContent/categoryContent';
 import Products from '../components/content/Products/Products';
 import Sidebar from '../components/Sidebar.js/Sidebar';
-import { Container, Placment, Mainpart } from '../styles/Styles';
-import { getKategori, getProducts } from '../utils/yourService';
+import { Placment, Mainpart } from '../styles/Styles';
+import { getKategori, getProducts } from '../utils/SanityFercher';
 
 const CategoryPage = () => (
-  <Container>
     <Placment>
       <Sidebar/>
       <Mainpart>
@@ -13,7 +12,6 @@ const CategoryPage = () => (
         <Products whatProducts={getProducts}/>
       </Mainpart>
     </Placment>
-  </Container>
 );
 
 export default CategoryPage;

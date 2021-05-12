@@ -51,6 +51,3 @@ const GridLayout = () => (
 );
 
 export default GridLayout;
-
-/* <Cell height={5}>This is a bar</Cell>
-    <Cell width={1}>baz</Cell> */
