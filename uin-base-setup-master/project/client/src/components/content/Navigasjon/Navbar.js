@@ -14,6 +14,12 @@ const Ul = styled.ul`
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.dark};
   height: 50px;
+  
+  @media (${({ theme }) => theme.scale.small}) {
+    height: fit-content;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
 `;
 
 const HeaderBox = styled.section`
