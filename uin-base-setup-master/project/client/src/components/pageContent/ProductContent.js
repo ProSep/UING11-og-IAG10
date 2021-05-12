@@ -10,6 +10,18 @@ const Grid = styled.div`
   grid-template-columns: 5fr 1fr 4fr;
   width: auto;
   height: auto;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
 `;
 
 const Grid2 = styled.div`
@@ -20,10 +32,25 @@ const Grid2 = styled.div`
   grid-column: 3;
   width: auto;
   height: auto;
+  
+  @media (${({ theme }) => theme.scale.small}) {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
 `;
 
 const SectionBox1 = styled.div`
   grid-row: 1;
+  @media (${({ theme }) => theme.scale.small}) {
+
+  }
 `;
 
 const SectionBox3 = styled.div`
@@ -43,7 +70,12 @@ const BestillBoks = styled.section`
   width: 350px;
   border-radius: 15px;
   padding: 5%;
-  margin-top: 5.12rem;
+  margin-top: 12.1rem;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    width: 300px;
+    margin-top: 5rem;
+}
 `;
 
 const VolumBoks = styled.section`
@@ -56,6 +88,11 @@ const VolumBoks = styled.section`
   border-radius: 15px;
   padding: 5%;
   margin-top: 29.65rem;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    width: 300px;
+    margin-top: 1.5rem;
+}
 `;
 
 const Title = styled.h1`
@@ -86,6 +123,9 @@ const MainBox1 = styled.div`
   grid-row: 1;
   
   margin: auto auto auto auto;
+
+  @media (${({ theme }) => theme.scale.small}) {
+}
 `;
 
 // Bottom Left Grid
@@ -93,9 +133,14 @@ const MainBox3 = styled.div`
   grid-column: 1 / 3;
   grid-row: 2;
   margin-top: 12.5rem;
+  margin-bottom: 3.5rem;
   font-size: 2rem;
   font-weight: 450;
   line-height: 3rem;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    margin-top: 3.5rem;
+}
 `;
 
 // Bottom Right Grid
@@ -112,10 +157,15 @@ const MainBox4 = styled.div`
   position: relative;
   margin-top: 3.5rem;
   background-color: ${({ theme }) => theme.colors.brownish};
+
+  @media (${({ theme }) => theme.scale.small}) {
+    width: 100%;
+    height: auto;
+}
 `;
 
 const PrisTittel = styled.h2`
-  margin-top: 12rem;
+  margin-top: 5rem;
   margin-left: 3rem;
 `;
 
@@ -159,6 +209,11 @@ const FakeButton = styled.button`
     background-color: red;
     color: white;
   }
+  
+  @media (${({ theme }) => theme.scale.small}) {
+    margin-left: 2.5rem;
+    margin-top: 3.8rem;
+}
 `;
 
 const OptionMenu = styled.select`
@@ -178,6 +233,11 @@ const OptionMenu = styled.select`
     background-color: red;
     color: white;
   }
+
+  @media (${({ theme }) => theme.scale.small}) {
+    margin-left: 2.5rem;
+    margin-top: 3.8rem;
+}
 `;
 
 const DetaljeFooter = styled.p`
@@ -186,6 +246,10 @@ const DetaljeFooter = styled.p`
   margin-top: 1.5rem;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
+
+  @media (${({ theme }) => theme.scale.small}) {
+    margin-bottom: 1.5rem;
+}
 `;
 
 const Product = ({ whatContent }) => {
@@ -197,7 +261,16 @@ const Product = ({ whatContent }) => {
 
   return (
     <>
-      <Grid>
+      <Grid>        
+        
+        <MainBox1>
+          {data?.bilde ? (
+            <img
+              src={urlFor(data.bilde).width(400).format("webp").url()}
+              alt={data.bilde.beskrivelse}
+            />
+          ) : null}
+        </MainBox1>
           <Grid2>
             <SectionBox1>
               <Title>{data?.tittel}</Title>
@@ -241,15 +314,6 @@ const Product = ({ whatContent }) => {
               </VolumBoks>
             </SectionBox4>
           </Grid2>
-
-        <MainBox1>
-          {data?.bilde ? (
-            <img
-              src={urlFor(data.bilde).width(400).format("webp").url()}
-              alt={data.bilde.beskrivelse}
-            />
-          ) : null}
-        </MainBox1>
 
         <MainBox4>
           <DetaljeFooter>Beskrivelse</DetaljeFooter>
